@@ -1,4 +1,4 @@
-answer,pack,cowboys,bucs,cardinals,chargers,colts,steelers,bengals,49ers,pats
+answer,empty,empty,empty,LIONS,emtpy,emtpy,STEELERS,empty,49ERS,PATS
 Jason,pack,seahawks,bucs,cardinals,chargers,colts,steelers,eagles,49ers,pats
 Austin,pack,seahawks,bucs,lions,panthers,colts,texans,eagles,49ers,pats
 Sam,saints,cowboys,bucs,cardinals,panthers,colts,steelers,bengals,49ers,pats

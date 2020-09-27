@@ -3,33 +3,40 @@
 WEEK_2_RESULTS = {"Jason":10, "Austin":6, "Sam":7, "Fritzy":9, "Brad_J":7,
                   "Tommy":9, "Rick":8, "Clark":8, "Carey":10, "Nick":8,
                   "Brownie":10, "Connor":9, "Marty":6}
-WEEK_3_RESULTS = {"Jason":8, "Austin":5, "Sam":8, "Fritzy":6, "Brad_J":7,
-                  "Tommy":6, "Rick":6, "Clark":6, "Carey":8, "Nick":7,
-                  "Brownie":7, "Connor":6, "Marty":6}
+WEEK_3_RESULTS = {"Jason":3, "Austin":2, "Sam":3, "Fritzy":2, "Brad_J":3,
+                  "Tommy":3, "Rick":3, "Clark":2, "Carey":3, "Nick":3,
+                  "Brownie":3, "Connor":2, "Marty":3}
 
-WEEK_NAME_DICT = {"WEEK_2_RESULTS":WEEK_2_RESULTS,
-                  "WEEK_3_RESULTS":WEEK_3_RESULTS}
+WEEK_NAME_DICT = {"WEEK_2_RESULTS":WEEK_2_RESULTS}
 
 def main(inFile, verbose):
     
+    systemOperational = runTestPool()
 
-    # Dict to hold answers read in from txt file
-    # {<name> : [pick1,pick2,...,pick10]}
-    answers = buildAnswersDict(inFile)
+    if systemOperational:
+        # Dict to hold answers read in from txt file
+        # {<name> : [pick1,pick2,...,pick10]}
+        answers = buildAnswersDict(inFile)
 
-    # Dict to hold number of correct answers per participant
-    # {<name> : <numCorrectAnswers>}
-    results = buildResultsDict(answers)
-    
+        # Dict to hold number of correct answers per participant
+        # {<name> : <numCorrectAnswers>}
+        results = buildResultsDict(answers)
         
-    displayWinners(answers)
-
-    # Extra logging if parameter is True. I need to add some more verbose functionality
-    if verbose:
-        displayParticipantsPicks(answers)
             
+        displayWinners(answers)
 
-    displayResults(results)
+        # Extra logging if parameter is True. I need to add some more verbose functionality
+        if verbose:
+            displayParticipantsPicks(answers)
+                
+
+        displayResults(results)
+
+        print("###########################")
+
+        calculateAndDisplayWinner(results)
+    else:
+        print("Error in test pool. Terminating execution")
     
 
 # This function takes a dictionary (answersDict) with one of the keys being equal to "answer". It
@@ -107,6 +114,26 @@ def buildResultsDict(answers):
             results[x] = numCorrect
     return results
 
+def calculateAndDisplayWinner(resultsDict):
+    winnersList = []
+    highestCorrectPicks = max(resultsDict.items(), key=lambda x: x[1])
+    for participant in resultsDict:
+        if resultsDict[participant] == highestCorrectPicks[1]:
+            winnersList.append({participant : resultsDict[participant]})
+    
+    if len(winnersList) > 1:
+        print("There is a tie with ", str(highestCorrectPicks[1])," correct picks. Result will be determined based on tie breaker score")
+        print(winnersList)
+    elif len(winnersList) == 1:
+        print("Winner is ", winnersList[0], "!")
+    else:
+        print("Error occured populating winners list")
+        
+
+
+
+
+
 
 ##############################################
 ## This is the beginning of the test pool code
@@ -121,6 +148,9 @@ def buildResultsDict(answers):
 # message and will terminate execution
 
 def runTestPool():
+    print("###########################")
+    print("STARTING TEST POOL")
+    print("###########################\n")
     # Variable to keep track of what week we are testing. Start at 2 because I never
     # got data for week 1
     weekNum = 2
@@ -137,15 +167,24 @@ def runTestPool():
         # So if we make it to this point without breaking out of the loop then that means we have
         # passed every week of data we have to test.
         if answers == {} and results == {}:
-            print("All systems go!")
-            break
-        
-        if results == WEEK_NAME_DICT["WEEK_"+str(weekNum)+"_RESULTS"]:
-            print("Week ", weekNum, " test passed!")
-        else:
-            print("Week ", weekNum, " test failed")
-            break
-        weekNum = weekNum + 1
+            print("All systems go!\n")
+            print("###########################")
+            print("TEST POOL COMPELTED")
+            print("###########################\n")
+            return True
+        try:
+            if results == WEEK_NAME_DICT["WEEK_"+str(weekNum)+"_RESULTS"]:
+                print("Week ", weekNum, " test passed!")
+            else:
+                print("Week ", weekNum, " test failed")
+                return False
+            weekNum = weekNum + 1
+        except:
+            print("Could not find internal data structure for week " + str(weekNum) + ". Continuing...\n")
+            print("###########################")
+            print("TEST POOL COMPELTED")
+            print("###########################\n")
+            return True
     
 
 def initializeTestVariables(inFile):
@@ -158,3 +197,9 @@ def initializeTestVariables(inFile):
         
     results = buildResultsDict(answers)
     return answers, results
+
+# Run through test pool
+# runTestPool()
+
+# Call the main() function
+main("week_3.txt", False)
