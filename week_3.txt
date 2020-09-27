@@ -1,0 +1,14 @@
+answer,pack,cowboys,bucs,cardinals,chargers,colts,steelers,bengals,49ers,pats
+Jason,pack,seahawks,bucs,cardinals,chargers,colts,steelers,eagles,49ers,pats
+Austin,pack,seahawks,bucs,lions,panthers,colts,texans,eagles,49ers,pats
+Sam,saints,cowboys,bucs,cardinals,panthers,colts,steelers,bengals,49ers,pats
+Fritzy,pack,seahawks,bucs,cardinals,panthers,colts,steelers,eagles,giants,pats
+Brad_J,saints,seahawks,bucs,cardinals,chargers,colts,steelers,eagles,49ers,pats
+Tommy,saints,seahawks,bucs,lions,panthers,colts,steelers,bengals,49ers,pats
+Rick,pack,seahawks,bucs,lions,panthers,colts,steelers,eagles,49ers,pats
+Clark,saints,seahawks,bucs,cardinals,chargers,colts,steelers,eagles,giants,pats
+Carey,pack,seahawks,bucs,cardinals,chargers,colts,steelers,eagles,49ers,pats
+Nick,saints,seahawks,bucs,cardinals,chargers,colts,steelers,eagles,49ers,pats
+Brownie,saints,seahawks,bucs,cardinals,chargers,colts,steelers,eagles,49ers,pats
+Connor,saints,seahawks,bucs,cardinals,chargers,colts,texans,eagles,49ers,pats
+Marty,saints,seahawks,broncos,lions,chargers,colts,steelers,bengals,49ers,pats
