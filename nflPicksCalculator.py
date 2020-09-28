@@ -1,5 +1,8 @@
 # Program to calculate number of correct picks on Sunday
 
+from colorama import init, Fore, Style
+init()
+
 WEEK_2_RESULTS = {"Jason":10, "Austin":6, "Sam":7, "Fritzy":9, "Brad_J":7,
                   "Tommy":9, "Rick":8, "Clark":8, "Carey":10, "Nick":8,
                   "Brownie":10, "Connor":9, "Marty":6}
@@ -33,8 +36,11 @@ def main(inFile, verbose):
         displayResults(results)
 
         print("###########################")
+        print("RESULTS")
+        print("###########################\n")
 
-        calculateAndDisplayWinner(results)
+        calculateAndDisplayWinner(results, answers)
+
     else:
         print("Error in test pool. Terminating execution")
     
@@ -52,6 +58,7 @@ def displayWinners(answersDict):
 def displayResults(resultsDict):
     for y in resultsDict:
         print(y, resultsDict[y])
+    print()
 
 
 # This function takes a dictionary (answersDict) and displays everyones picks for the week. It will
@@ -107,27 +114,59 @@ def buildResultsDict(answers):
             for answer in answers[x]:
                 # Actual comparison to check participant x's
                 # answers against the answer key's answers
-                if answer.lower() == answers["answer"][counter].lower():
+                if (answer.lower() == answers["answer"][counter].lower()) and counter < 10:
                     numCorrect = numCorrect + 1
                 
                 counter = counter + 1
             results[x] = numCorrect
     return results
 
-def calculateAndDisplayWinner(resultsDict):
-    winnersList = []
-    highestCorrectPicks = max(resultsDict.items(), key=lambda x: x[1])
-    for participant in resultsDict:
-        if resultsDict[participant] == highestCorrectPicks[1]:
-            winnersList.append({participant : resultsDict[participant]})
+def calculateAndDisplayWinner(resultsDict, answersDict):
+    localCount = 0
+    prefix = "1st Place: "
+    amount = "$200"
+    tieBreakerScore = answersDict["answer"][10]
+    while localCount < 2:
+        print(Style.RESET_ALL)
+        if localCount == 1:
+            prefix = "2nd Place: "
+            amount = "$60"
+        winnersList = []
+        smallestDiff = 100
+        finalWinner = ""
+        finalWinnerTB = ""
+        highestCorrectPicks = max(resultsDict.items(), key=lambda x: x[1])
+        for participant in resultsDict:
+            if resultsDict[participant] == highestCorrectPicks[1]:
+                winnersList.append({participant : resultsDict[participant]})
+        
+        if len(winnersList) > 1:
+            print("There is a tie with ", str(highestCorrectPicks[1])," correct picks. Result will be determined based on tie breaker score")
+            print("Tiebreaker score: " + str(tieBreakerScore))
+            for winner in winnersList:
+                for winnerKey in winner:
+                    participantTieBreaker = answersDict[winnerKey][10]
+                    print(winnerKey + "'s tie breaker score: " + str(participantTieBreaker))
+                    participantDiff = abs(int(participantTieBreaker) - int(tieBreakerScore))
+                    if participantDiff <= smallestDiff:
+                        if participantDiff == smallestDiff:
+                            print("We have a problem. Both tiebreaker scores were the same value away from actual tiebreaker")
+                        else:
+                            smallestDiff = participantDiff
+                            finalWinner = winnerKey
+                            finalWinnerTB = str(participantTieBreaker)
+            print(Fore.GREEN + prefix + finalWinner + " wins ", amount, " with a tiebreaker score of " + finalWinnerTB)
+            resultsDict.pop(finalWinner)
+            localCount = localCount + 1
+        elif len(winnersList) == 1:
+            for winner in winnersList:
+                for winnerKey in winner:
+                    print(Fore.GREEN + prefix + winnerKey + " wins ", amount, " with " + str(winner[winnerKey]) + " correct picks!")
+                    resultsDict.pop(winnerKey)
+                    localCount = localCount + 1
+        else:
+            print("Error occured populating winners list")
     
-    if len(winnersList) > 1:
-        print("There is a tie with ", str(highestCorrectPicks[1])," correct picks. Result will be determined based on tie breaker score")
-        print(winnersList)
-    elif len(winnersList) == 1:
-        print("Winner is ", winnersList[0], "!")
-    else:
-        print("Error occured populating winners list")
         
 
 
@@ -202,4 +241,4 @@ def initializeTestVariables(inFile):
 # runTestPool()
 
 # Call the main() function
-main("week_3.txt", False)
+main("week_2.txt", False)
