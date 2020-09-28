@@ -6,9 +6,9 @@ init()
 WEEK_2_RESULTS = {"Jason":10, "Austin":6, "Sam":7, "Fritzy":9, "Brad_J":7,
                   "Tommy":9, "Rick":8, "Clark":8, "Carey":10, "Nick":8,
                   "Brownie":10, "Connor":9, "Marty":6}
-WEEK_3_RESULTS = {"Jason":3, "Austin":2, "Sam":3, "Fritzy":2, "Brad_J":3,
-                  "Tommy":3, "Rick":3, "Clark":2, "Carey":3, "Nick":3,
-                  "Brownie":3, "Connor":2, "Marty":3}
+WEEK_3_RESULTS = {"Jason":7, "Austin":8, "Sam":6, "Fritzy":7, "Brad_J":6,
+                  "Tommy":8, "Rick":9, "Clark":5, "Carey":7, "Nick":6,
+                  "Brownie":6, "Connor":5, "Marty":6}
 
 WEEK_NAME_DICT = {"WEEK_2_RESULTS":WEEK_2_RESULTS,
                   "WEEK_3_RESULTS":WEEK_3_RESULTS}
@@ -243,4 +243,4 @@ def initializeTestVariables(inFile):
 runTestPool()
 
 # Call the main() function
-main("week_2.txt", False)
+main("week_3.txt", False)
