@@ -1,17 +1,10 @@
 # Program to calculate number of correct picks on Sunday
 
+import json
 from colorama import init, Fore, Style
 init()
 
-WEEK_2_RESULTS = {"Jason":10, "Austin":6, "Sam":7, "Fritzy":9, "Brad_J":7,
-                  "Tommy":9, "Rick":8, "Clark":8, "Carey":10, "Nick":8,
-                  "Brownie":10, "Connor":9, "Marty":6}
-WEEK_3_RESULTS = {"Jason":7, "Austin":8, "Sam":6, "Fritzy":7, "Brad_J":6,
-                  "Tommy":8, "Rick":9, "Clark":5, "Carey":7, "Nick":6,
-                  "Brownie":6, "Connor":5, "Marty":6}
-
-WEEK_NAME_DICT = {"WEEK_2_RESULTS":WEEK_2_RESULTS,
-                  "WEEK_3_RESULTS":WEEK_3_RESULTS}
+NUMBER_OF_GAMES = 10
 
 def main(inFile, verbose):
 
@@ -109,7 +102,7 @@ def buildResultsDict(answers):
             for answer in answers[x]:
                 # Actual comparison to check participant x's
                 # answers against the answer key's answers
-                if (answer.lower() == answers["answer"][counter].lower()) and counter < 10:
+                if (answer.lower() == answers["answer"][counter].lower()) and counter < NUMBER_OF_GAMES:
                     numCorrect = numCorrect + 1
                 
                 counter = counter + 1
@@ -120,7 +113,7 @@ def calculateAndDisplayWinner(resultsDict, answersDict):
     localCount = 0
     prefix = "1st Place: "
     amount = "$200"
-    tieBreakerScore = answersDict["answer"][10]
+    tieBreakerScore = answersDict["answer"][NUMBER_OF_GAMES]
     while localCount < 2:
         print(Style.RESET_ALL)
         if localCount == 1:
@@ -140,7 +133,7 @@ def calculateAndDisplayWinner(resultsDict, answersDict):
             print("Tiebreaker score: " + str(tieBreakerScore))
             for winner in winnersList:
                 for winnerKey in winner:
-                    participantTieBreaker = answersDict[winnerKey][10]
+                    participantTieBreaker = answersDict[winnerKey][NUMBER_OF_GAMES]
                     print(winnerKey + "'s tie breaker score: " + str(participantTieBreaker))
                     participantDiff = abs(int(participantTieBreaker) - int(tieBreakerScore))
                     if participantDiff <= smallestDiff:
@@ -185,6 +178,8 @@ def runTestPool():
     print("###########################")
     print("STARTING TEST POOL")
     print("###########################\n")
+
+    
     # Variable to keep track of what week we are testing. Start at 2 because I never
     # got data for week 1
     weekNum = 2
@@ -202,13 +197,19 @@ def runTestPool():
         # So if we make it to this point without breaking out of the loop then that means we have
         # passed every week of data we have to test.
         if answers == {} and results == {}:
-            print("All systems go!\n")
+            print(Fore.GREEN + "All systems go!\n")
+            print(Style.RESET_ALL)
             print("###########################")
             print("TEST POOL COMPELTED")
             print("###########################\n")
             return True
+
+        # Get the dictionary from the test pool that contains the right answers to test 
+        # buildAnswersDict() and buildResultsDict() against
+        compareDict = getDictFromTestPool(weekNum)
+        
         try:
-            if results == WEEK_NAME_DICT["WEEK_"+str(weekNum)+"_RESULTS"]:
+            if results == compareDict:
                 print(Fore.GREEN + "Week ", weekNum, " test passed!")
                 print(Style.RESET_ALL)
             else:
@@ -239,8 +240,16 @@ def initializeTestVariables(inFile):
     results = buildResultsDict(answers)
     return answers, results
 
+def getDictFromTestPool(weekNum):
+    offset = 2
+    testDict = {}
+    with open("testPool.json") as testFile:
+        data = json.load(testFile)
+        testDict = data['TEST_POOL'][weekNum-offset]
+    return testDict
+
 # Run through test pool
 runTestPool()
 
 # Call the main() function
-main("week_3.txt", False)
+# main("week_3.txt", False)
