@@ -6,7 +6,7 @@
         "Austin":6,
         "Sam":7,
         "Fritzy":9,
-        "Brad_J":7,
+        "Brad_J":8,
         "Tommy":9,
         "Rick":8,
         "Clark":8,
@@ -30,6 +30,21 @@
             "Brownie":6,
             "Connor":5,
             "Marty":6
+        },
+        {
+            "Jason":0,
+            "Austin":0,
+            "Sam":0,
+            "Fritzy":0,
+            "Brad_J":0,
+            "Tommy":0,
+            "Rick":0,
+            "Clark":0,
+            "Carey":0,
+            "Nick":0,
+            "Brownie":0,
+            "Connor":0,
+            "Marty":0
         }
 
    ]

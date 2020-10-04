@@ -98,11 +98,11 @@ def buildResultsDict(answers):
     for x in answers:
         numCorrect = 0
         counter = 0
-        if x != "answer":
+        if x != "answer" and x != "numGames":
             for answer in answers[x]:
                 # Actual comparison to check participant x's
                 # answers against the answer key's answers
-                if (answer.lower() == answers["answer"][counter].lower()) and counter < NUMBER_OF_GAMES:
+                if (answer.lower() == answers["answer"][counter].lower()) and counter < int(answers["numGames"][0]):
                     numCorrect = numCorrect + 1
                 
                 counter = counter + 1
@@ -113,7 +113,7 @@ def calculateAndDisplayWinner(resultsDict, answersDict):
     localCount = 0
     prefix = "1st Place: "
     amount = "$200"
-    tieBreakerScore = answersDict["answer"][NUMBER_OF_GAMES]
+    tieBreakerScore = answersDict["answer"][int(answersDict["numGames"][0])]
     while localCount < 2:
         print(Style.RESET_ALL)
         if localCount == 1:
@@ -133,7 +133,7 @@ def calculateAndDisplayWinner(resultsDict, answersDict):
             print("Tiebreaker score: " + str(tieBreakerScore))
             for winner in winnersList:
                 for winnerKey in winner:
-                    participantTieBreaker = answersDict[winnerKey][NUMBER_OF_GAMES]
+                    participantTieBreaker = answersDict[winnerKey][int(answersDict["numGames"][0])]
                     print(winnerKey + "'s tie breaker score: " + str(participantTieBreaker))
                     participantDiff = abs(int(participantTieBreaker) - int(tieBreakerScore))
                     if participantDiff <= smallestDiff:
@@ -203,6 +203,15 @@ def runTestPool():
             print("TEST POOL COMPELTED")
             print("###########################\n")
             return True
+        
+
+        # Make sure I didn't make any typos entering the data
+        print("Running spell checker for " + fileName + " ...")
+        spellingResults = runSpellChecker(fileName)
+        if spellingResults:
+            print("Spell checker completed. No mistakes were found. Continuing execution.")
+        else:
+            return
 
         # Get the dictionary from the test pool that contains the right answers to test 
         # buildAnswersDict() and buildResultsDict() against
@@ -248,8 +257,29 @@ def getDictFromTestPool(weekNum):
         testDict = data['TEST_POOL'][weekNum-offset]
     return testDict
 
+def runSpellChecker(fileName):
+    teamNames = ["cardinals","falcons","panthers","bears","cowboys","lions","pack","rams","vikings",
+                 "saints","giants","eagles","49ers","seahawks","bucs","redskins","ravens","bills",
+                 "bengals","browns","broncos","texans","colts","jags","chiefs","raiders","chargers",
+                 "dolphins","pats","jets","steelers","titans"]
+    participantNames = ["jason","austin","sam","fritzy","brad_j","tommy","rick","clark","carey",
+                        "nick","brownie","connor","marty","answer","numgames","empty"]
+    inFile = open(fileName)
+    for line in inFile:
+        line = line.strip()
+        line = line.split(",")
+        for entry in line:
+            if entry.lower() not in participantNames and entry.lower() not in teamNames and entry != line[-1]:
+                print(Fore.RED + "You made a typo when entering " + entry + " for " + line[0] + " in " + fileName)
+                print(Style.RESET_ALL)
+                return False
+
+    return True
+
+
+
 # Run through test pool
-runTestPool()
+# runTestPool()
 
 # Call the main() function
-# main("week_3.txt", False)
+main("week_3.txt", False)

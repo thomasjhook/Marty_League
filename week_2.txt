@@ -3,7 +3,7 @@ Jason,bears,cowboys,pack,colts,bills,49ers,rams,steelers,bucs,titans,43
 Austin,giants,falcons,pack,colts,dolphins,49ers,eagles,steelers,bucs,titans,51
 Sam,giants,cowboys,pack,vikings,bills,49ers,eagles,steelers,bucs,titans,48
 Fritzy,giants,cowboys,pack,colts,bills,49ers,rams,steelers,bucs,titans,63
-Brad_J,giants,cowbows,pack,vikings,bills,49ers,rams,steelers,bucs,titans,44
+Brad_J,giants,cowboys,pack,vikings,bills,49ers,rams,steelers,bucs,titans,44
 Tommy,bears,cowboys,pack,colts,bills,49ers,rams,steelers,bucs,jags,59
 Rick,bears,cowboys,pack,vikings,dolphins,49ers,rams,steelers,bucs,titans,42
 Clark,bears,cowboys,pack,vikings,bills,jets,rams,steelers,bucs,titans,41
@@ -12,3 +12,4 @@ Nick,bears,cowboys,pack,vikings,bills,49ers,eagles,steelers,bucs,titans,42
 Brownie,bears,cowboys,pack,colts,bills,49ers,rams,steelers,bucs,titans,48
 Connor,bears,cowboys,pack,vikings,bills,49ers,rams,steelers,bucs,titans,44
 Marty,giants,falcons,pack,vikings,bills,49ers,rams,broncos,bucs,titans,34
+numGames,10

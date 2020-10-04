@@ -1,0 +1,15 @@
+answer,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
+Jason,cardinals,bears,bengals,cowboys,saints,texans,seahawks,bucs,ravens,49ers,raiders,chiefs,rams,47
+Austin,cardinals,colts,jags,cowboys,saints,vikings,seahawks,bucs,ravens,49ers,bills,chiefs,rams,55
+Sam,cardinals,colts,jags,cowboys,saints,texans,seahawks,bucs,ravens,49ers,bills,chiefs,rams,48
+Fritzy,cardinals,colts,bengals,cowboys,saints,texans,seahawks,bucs,ravens,49ers,bills,chiefs,rams,56
+Brad_J,cardinals,colts,bengals,cowboys,saints,texans,seahawks,bucs,ravens,49ers,bills,chiefs,rams,44
+Tommy,panthers,colts,jags,cowboys,saints,vikings,seahawks,bucs,ravens,49ers,raiders,chiefs,rams,53
+Rick,panthers,bears,jags,cowboys,saints,texans,seahawks,bucs,ravens,49ers,bills,chiefs,rams,45
+Clark,cardinals,bears,bengals,cowboys,saints,vikings,seahawks,bucs,ravens,49ers,raiders,chiefs,rams,48
+Carey,cardinals,colts,bengals,cowboys,saints,texans,seahawks,bucs,ravens,49ers,bills,chiefs,rams,48
+Nick,cardinals,bears,bengals,cowboys,saints,texans,seahawks,bucs,ravens,49ers,bills,chiefs,rams,47
+Brownie,cardinals,colts,bengals,cowboys,saints,texans,seahawks,bucs,ravens,49ers,bills,chiefs,rams,48
+Connor,cardinals,bears,bengals,cowboys,saints,texans,seahawks,bucs,ravens,eagles,bills,chiefs,rams,49
+Marty,cardinals,bears,jags,cowboys,saints,texans,seahawks,bucs,ravens,eagles,bills,chiefs,rams,47
+numGames,13

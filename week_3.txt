@@ -12,3 +12,4 @@ Nick,saints,seahawks,bucs,cardinals,chargers,colts,steelers,eagles,49ers,pats,47
 Brownie,saints,seahawks,bucs,cardinals,chargers,colts,steelers,eagles,49ers,pats,51
 Connor,saints,seahawks,bucs,cardinals,chargers,colts,texans,eagles,49ers,pats,40
 Marty,saints,seahawks,broncos,lions,chargers,colts,steelers,bengals,49ers,pats,55
+numGames,10
