@@ -138,7 +138,8 @@ def calculateAndDisplayWinner(resultsDict, answersDict):
                     participantDiff = abs(int(participantTieBreaker) - int(tieBreakerScore))
                     if participantDiff <= smallestDiff:
                         if participantDiff == smallestDiff:
-                            print("We have a problem. Both tiebreaker scores were the same value away from actual tiebreaker")
+                            print(Fore.YELLOW + "We have a problem. Both tiebreaker scores were the same value away from actual tiebreaker")
+                            print(Style.RESET_ALL)
                         else:
                             smallestDiff = participantDiff
                             finalWinner = winnerKey
@@ -282,4 +283,4 @@ def runSpellChecker(fileName):
 # runTestPool()
 
 # Call the main() function
-main("week_3.txt", False)
+main("week_4.txt", False)
