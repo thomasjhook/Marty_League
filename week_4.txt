@@ -1,4 +1,4 @@
-answer,PANTHERS,COLTS,BENGALS,BROWNS,SAINTS,VIKINGS,SEAHAWKS,BUCS,RAVENS,EAGLES,BILLS,empty,RAMS,48
+answer,PANTHERS,COLTS,BENGALS,BROWNS,SAINTS,VIKINGS,SEAHAWKS,BUCS,RAVENS,EAGLES,BILLS,CHIEFS,RAMS,48
 Jason,cardinals,bears,bengals,cowboys,saints,texans,seahawks,bucs,ravens,49ers,raiders,chiefs,rams,47
 Austin,cardinals,colts,jags,cowboys,saints,vikings,seahawks,bucs,ravens,49ers,bills,chiefs,rams,55
 Sam,cardinals,colts,jags,cowboys,saints,texans,seahawks,bucs,ravens,49ers,bills,chiefs,rams,48
