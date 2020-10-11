@@ -207,10 +207,10 @@ def runTestPool():
         
 
         # Make sure I didn't make any typos entering the data
-        print("Running spell checker for " + fileName + " ...")
-        spellingResults = runSpellChecker(fileName)
+        print("Running input validator for " + fileName + " ...")
+        spellingResults = runInputValidator(fileName)
         if spellingResults:
-            print("Spell checker completed. No mistakes were found. Continuing execution.")
+            print("Input validator completed. No mistakes were found. Continuing execution.")
         else:
             return
 
@@ -258,13 +258,14 @@ def getDictFromTestPool(weekNum):
         testDict = data['TEST_POOL'][weekNum-offset]
     return testDict
 
-def runSpellChecker(fileName):
+def runInputValidator(fileName):
     teamNames = ["cardinals","falcons","panthers","bears","cowboys","lions","pack","rams","vikings",
                  "saints","giants","eagles","49ers","seahawks","bucs","redskins","ravens","bills",
                  "bengals","browns","broncos","texans","colts","jags","chiefs","raiders","chargers",
                  "dolphins","pats","jets","steelers","titans"]
     participantNames = ["jason","austin","sam","fritzy","brad_j","tommy","rick","clark","carey",
-                        "nick","brownie","connor","marty","answer","numgames","empty"]
+                        "nick","brownie","connor","marty","answer","numgames","empty","jake_h","cal_griff",
+                        "charlie","chubbs","skeeter"]
     inFile = open(fileName)
     for line in inFile:
         line = line.strip()
@@ -280,7 +281,7 @@ def runSpellChecker(fileName):
 
 
 # Run through test pool
-# runTestPool()
+runTestPool()
 
 # Call the main() function
-main("week_4.txt", False)
+# main("week_4.txt", False)
