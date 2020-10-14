@@ -4,7 +4,9 @@ import json
 from colorama import init, Fore, Style
 init()
 
-NUMBER_OF_GAMES = 10
+FIRST_AMOUNT = "$220"
+SECOND_AMOUNT = "$100"
+THIRD_AMOUNT = "$40"
 
 def main(inFile, verbose):
 
@@ -112,13 +114,16 @@ def buildResultsDict(answers):
 def calculateAndDisplayWinner(resultsDict, answersDict):
     localCount = 0
     prefix = "1st Place: "
-    amount = "$200"
+    amount = FIRST_AMOUNT
     tieBreakerScore = answersDict["answer"][int(answersDict["numGames"][0])]
-    while localCount < 2:
+    while localCount < 3:
         print(Style.RESET_ALL)
         if localCount == 1:
             prefix = "2nd Place: "
-            amount = "$60"
+            amount = SECOND_AMOUNT
+        elif localCount == 2:
+            prefix = "3rd Place: "
+            amount = THIRD_AMOUNT
         winnersList = []
         smallestDiff = 100
         finalWinner = ""
@@ -281,7 +286,7 @@ def runInputValidator(fileName):
 
 
 # Run through test pool
-runTestPool()
+# runTestPool()
 
 # Call the main() function
-# main("week_4.txt", False)
+main("week_5.txt", False)
