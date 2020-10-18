@@ -286,7 +286,7 @@ def runInputValidator(fileName):
 
 
 # Run through test pool
-# runTestPool()
+runTestPool()
 
 # Call the main() function
-main("week_5.txt", False)
+# main("week_5.txt", False)
