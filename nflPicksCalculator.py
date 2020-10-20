@@ -265,7 +265,7 @@ def getDictFromTestPool(weekNum):
 
 def runInputValidator(fileName):
     teamNames = ["cardinals","falcons","panthers","bears","cowboys","lions","pack","rams","vikings",
-                 "saints","giants","eagles","49ers","seahawks","bucs","redskins","ravens","bills",
+                 "saints","giants","eagles","49ers","seahawks","bucs","wash","ravens","bills",
                  "bengals","browns","broncos","texans","colts","jags","chiefs","raiders","chargers",
                  "dolphins","pats","jets","steelers","titans"]
     participantNames = ["jason","austin","sam","fritzy","brad_j","tommy","rick","clark","carey",
@@ -285,8 +285,11 @@ def runInputValidator(fileName):
 
 
 
-# Run through test pool
-runTestPool()
+# # Run through test pool
+# runTestPool()
+
+# # Validate inputs
+# runInputValidator("week_6.txt")
 
 # Call the main() function
-# main("week_5.txt", False)
+main("week_6.txt", False)

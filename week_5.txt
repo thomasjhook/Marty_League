@@ -5,7 +5,7 @@ Austin,rams,bills,steelers,cardinals,chiefs,jags,ravens,falcons,49ers,cowboys,br
 Sam,rams,bills,steelers,cardinals,chiefs,jags,ravens,panthers,49ers,cowboys,browns,pats,seahawks,saints,48
 Brad_J,rams,bills,steelers,cardinals,chiefs,texans,ravens,panthers,49ers,cowboys,colts,pats,seahawks,saints,56
 Tommy,rams,titans,steelers,cardinals,chiefs,texans,ravens,falcons,49ers,cowboys,colts,pats,seahawks,saints,49
-Fritzy,redskins,bills,steelers,cardinals,chiefs,texans,ravens,falcons,49ers,cowboys,colts,pats,seahawks,saints,59
+Fritzy,wash,bills,steelers,cardinals,chiefs,texans,ravens,falcons,49ers,cowboys,colts,pats,seahawks,saints,59
 Rick,rams,bills,steelers,cardinals,chiefs,texans,ravens,panthers,49ers,cowboys,browns,pats,seahawks,saints,59
 Jake_h,rams,bills,steelers,cardinals,chiefs,texans,ravens,panthers,49ers,cowboys,browns,pats,seahawks,saints,59
 Cal_Griff,rams,titans,steelers,cardinals,chiefs,texans,ravens,falcons,49ers,cowboys,colts,pats,vikings,chargers,45
