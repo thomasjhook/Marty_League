@@ -289,7 +289,7 @@ def runInputValidator(fileName):
 # runTestPool()
 
 # # Validate inputs
-# runInputValidator("week_7.txt")
+# runInputValidator("week_8.txt")
 
-# Call the main() function
-main("week_7.txt", False)
+# # Call the main() function
+# main("week_7.txt", False)
