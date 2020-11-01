@@ -187,7 +187,6 @@ def calculateAndDisplayWinner(resultsDict, answersDict):
             prefix = "3rd Place: "
             amount = THIRD_AMOUNT
         winnersList = []
-        tieBreakerList = []
         smallestDiff = 100
         finalWinner = ""
         finalWinnerTB = ""
@@ -218,79 +217,22 @@ def calculateAndDisplayWinner(resultsDict, answersDict):
                             finalWinner = winnerKey
                             finalWinnerTB = str(participantTieBreaker)
             if sameTieBreakerScore:
-                for winner in winnersList:
-                    for winnerKey in winner:
-                        participantTieBreaker2 = answersDict[winnerKey][int(answersDict["numGames"][0])]
-                        participantDiff2 = abs(int(participantTieBreaker2) - int(tieBreakerScore))
-                        if participantDiff2 == sameScoreTieBreakerValue:
-                            tieBreakerList.append(winnerKey)
-                winnerNameString = ""
-                # Case 1: 3 or more people with same tiebreaker tied for 1ST
-                if localCount == 0 and len(tieBreakerList) > 2:
-                    print(Fore.GREEN + "3 or more people tied for first place!")
-                    resultString = resultString + "3 or more people tied for first place!" + "\n"
-                    for participant in tieBreakerList:
-                        winnerNameString = winnerNameString + participant + ", "
-                    winnerNameString = winnerNameString[:-2]
-                    amountWon = (FIRST_AMOUNT_INT + SECOND_AMOUNT_INT + THIRD_AMOUNT_INT) / len(tieBreakerList)
-                    print(winnerNameString + " each win $" + str(amountWon))
-                    resultString = resultString + winnerNameString + " each win $" + str(amountWon) + "\n"
-                    print(Style.RESET_ALL)
-                    winnerNameString = ""
+                shouldTerminate, localCount, resultString, namesToRemove = determineTieBreakerWinner(winnersList, answersDict, localCount, resultString, tieBreakerScore, sameScoreTieBreakerValue)
+                if shouldTerminate:
                     return resultString
-                
-                # Case 2: 2 people with same tiebreaker tied for 1ST
-                elif localCount == 0 and len(tieBreakerList) == 2:
-                    print(Fore.GREEN + "2 people tied for first place!")
-                    resultString = resultString + "2 people tied for first place!" + "\n"
-                    for participant in tieBreakerList:
-                        winnerNameString = winnerNameString + participant + ", "
-                    winnerNameString = winnerNameString[:-2]
-                    amountWon = (FIRST_AMOUNT_INT + SECOND_AMOUNT_INT) / len(tieBreakerList)
-                    print(winnerNameString + " each win $" + str(amountWon))
-                    resultString = resultString + winnerNameString + " each win $" + str(amountWon) + "\n"
-                    print(Style.RESET_ALL)
-                    winnerNameString = ""
-                    localCount = 2
-                
-                # Case 3: 2 or more people with same tiebreaker tied for 2ND
-                elif localCount == 1 and len(tieBreakerList) == 2:
-                    print(Fore.GREEN + "2 or more people tied for second place!")
-                    resultString = resultString + "2 or more people tied for second place!" + "\n"
-                    for participant in tieBreakerList:
-                        winnerNameString = winnerNameString + participant + ", "
-                    winnerNameString = winnerNameString[:-2]
-                    amountWon = (SECOND_AMOUNT_INT + THIRD_AMOUNT_INT) / len(tieBreakerList)
-                    print(winnerNameString + " each win $" + str(amountWon))
-                    resultString = resultString + winnerNameString + " each win $" + str(amountWon) + "\n"
-                    print(Style.RESET_ALL)
-                    winnerNameString = ""
-                    return resultString
-                
-                # Case 4: 2 or more people with same tiebreaker tied for 3RD
-                elif localCount == 2 and len(tieBreakerList) == 2:
-                    print(Fore.GREEN + "2 or more people tied for third place!")
-                    resultString = resultString + "2 or more people tied for third place!" + "\n"
-                    for participant in tieBreakerList:
-                        winnerNameString = winnerNameString + participant + ", "
-                    winnerNameString = winnerNameString[:-2]
-                    amountWon = THIRD_AMOUNT_INT / len(tieBreakerList)
-                    print(winnerNameString + " each win $" + str(amountWon))
-                    resultString = resultString + winnerNameString + " each win $" + str(amountWon) + "\n"
-                    print(Style.RESET_ALL)
-                    winnerNameString = ""
-                    return resultString
-                
+                else:
+                    for name in namesToRemove:
+                        resultsDict.pop(name)
             else:
-                print(Fore.GREEN + prefix + finalWinner + " wins ", amount, " with a tiebreaker score of " + finalWinnerTB)
-                resultString = resultString + prefix + finalWinner + " wins ", amount, " with a tiebreaker score of " + finalWinnerTB + "\n"
+                print(Fore.GREEN + prefix + finalWinner + " wins " + amount + " with a tiebreaker score of " + finalWinnerTB)
+                resultString = resultString + prefix + finalWinner + " wins " + amount + " with a tiebreaker score of " + finalWinnerTB + "\n"
                 resultsDict.pop(finalWinner)
                 localCount = localCount + 1
         elif len(winnersList) == 1:
             for winner in winnersList:
                 for winnerKey in winner:
-                    print(Fore.GREEN + prefix + winnerKey + " wins ", amount, " with " + str(winner[winnerKey]) + " correct picks!")
-                    resultString = resultString + prefix + winnerKey + " wins ", amount, " with " + str(winner[winnerKey]) + " correct picks!" + "\n"
+                    print(Fore.GREEN + prefix + winnerKey + " wins " + amount + " with " + str(winner[winnerKey]) + " correct picks!")
+                    resultString = resultString + prefix + winnerKey + " wins " + amount + " with " + str(winner[winnerKey]) + " correct picks!" + "\n"
                     resultsDict.pop(winnerKey)
                     localCount = localCount + 1
         else:
@@ -298,7 +240,75 @@ def calculateAndDisplayWinner(resultsDict, answersDict):
 
     return resultString
     
-        
+# Determines a winner for 1ST, 2ND or 3RD if any of them have a tie in number of correct picks
+# AND the same tie breaker score
+def determineTieBreakerWinner(winnersList, answersDict, localCount, resultString, tieBreakerScore, sameScoreTieBreakerValue):
+    tieBreakerList = []
+    for winner in winnersList:
+        for winnerKey in winner:
+            participantTieBreaker2 = answersDict[winnerKey][int(answersDict["numGames"][0])]
+            participantDiff2 = abs(int(participantTieBreaker2) - int(tieBreakerScore))
+            if participantDiff2 == sameScoreTieBreakerValue:
+                tieBreakerList.append(winnerKey)
+    
+    winnerNameString = ""
+    # Case 1: 3 or more people with same tiebreaker tied for 1ST
+    if localCount == 0 and len(tieBreakerList) > 2:
+        print(Fore.GREEN + "3 or more people tied for first place!")
+        resultString = resultString + "3 or more people tied for first place!" + "\n"
+        for participant in tieBreakerList:
+            winnerNameString = winnerNameString + participant + ", "
+        winnerNameString = winnerNameString[:-2]
+        amountWon = (FIRST_AMOUNT_INT + SECOND_AMOUNT_INT + THIRD_AMOUNT_INT) / len(tieBreakerList)
+        print(winnerNameString + " each win $" + str(amountWon))
+        resultString = resultString + winnerNameString + " each win $" + str(amountWon) + "\n"
+        print(Style.RESET_ALL)
+        winnerNameString = ""
+        return (True, 0, resultString, [])
+    
+    # Case 2: 2 people with same tiebreaker tied for 1ST
+    elif localCount == 0 and len(tieBreakerList) == 2:
+        namesToRemove = []
+        print(Fore.GREEN + "2 people tied for first place!")
+        resultString = resultString + "2 people tied for first place!" + "\n"
+        for participant in tieBreakerList:
+            winnerNameString = winnerNameString + participant + ", "
+            namesToRemove.append(participant)
+        winnerNameString = winnerNameString[:-2]
+        amountWon = (FIRST_AMOUNT_INT + SECOND_AMOUNT_INT) / len(tieBreakerList)
+        print(winnerNameString + " each win $" + str(amountWon))
+        resultString = resultString + winnerNameString + " each win $" + str(amountWon) + "\n"
+        print(Style.RESET_ALL)
+        winnerNameString = ""
+        return (False, 2, resultString, namesToRemove)
+    
+    # Case 3: 2 or more people with same tiebreaker tied for 2ND
+    elif localCount == 1 and len(tieBreakerList) == 2:
+        print(Fore.GREEN + "2 or more people tied for second place!")
+        resultString = resultString + "2 or more people tied for second place!" + "\n"
+        for participant in tieBreakerList:
+            winnerNameString = winnerNameString + participant + ", "
+        winnerNameString = winnerNameString[:-2]
+        amountWon = (SECOND_AMOUNT_INT + THIRD_AMOUNT_INT) / len(tieBreakerList)
+        print(winnerNameString + " each win $" + str(amountWon))
+        resultString = resultString + winnerNameString + " each win $" + str(amountWon) + "\n"
+        print(Style.RESET_ALL)
+        winnerNameString = ""
+        return (True, 0, resultString, [])
+    
+    # Case 4: 2 or more people with same tiebreaker tied for 3RD
+    elif localCount == 2 and len(tieBreakerList) == 2:
+        print(Fore.GREEN + "2 or more people tied for third place!")
+        resultString = resultString + "2 or more people tied for third place!" + "\n"
+        for participant in tieBreakerList:
+            winnerNameString = winnerNameString + participant + ", "
+        winnerNameString = winnerNameString[:-2]
+        amountWon = THIRD_AMOUNT_INT / len(tieBreakerList)
+        print(winnerNameString + " each win $" + str(amountWon))
+        resultString = resultString + winnerNameString + " each win $" + str(amountWon) + "\n"
+        print(Style.RESET_ALL)
+        winnerNameString = ""
+        return (True, 0, resultString, [])
 
 
 
@@ -428,5 +438,5 @@ def runInputValidator(fileName):
 # # Validate inputs
 # runInputValidator("week_8.txt")
 
-# # Call the main() function
-# main("week_5.txt", False)
+# Call the main() function
+main("week_5.txt", False)
