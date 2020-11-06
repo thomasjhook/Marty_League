@@ -439,4 +439,4 @@ def runInputValidator(fileName):
 # runInputValidator("week_8.txt")
 
 # Call the main() function
-main("week_5.txt", False)
+main("week_8.txt", False)

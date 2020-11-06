@@ -1,4 +1,4 @@
-answer,STEELERS,DOLPHINS,CHIEFS,VIKINGS,COLTS,RAIDERS,BENGALS,BILLS,empty,empty,empty,empty,empty,100
+answer,STEELERS,DOLPHINS,CHIEFS,VIKINGS,COLTS,RAIDERS,BENGALS,BILLS,BRONCOS,SEAHAWKS,SAINTS,EAGLES,BUCS,48
 Marty,steelers,rams,chiefs,pack,lions,browns,titans,bills,chargers,49ers,bears,eagles,bucs,44
 Jason,steelers,rams,chiefs,pack,lions,raiders,titans,bills,broncos,seahawks,saints,eagles,bucs,47
 Austin,steelers,rams,chiefs,pack,colts,raiders,bengals,bills,chargers,seahawks,saints,eagles,bucs,57
