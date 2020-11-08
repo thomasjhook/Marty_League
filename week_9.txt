@@ -5,7 +5,6 @@ Austin,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,e
 Sam,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
 Brad_J,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
 Tommy,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
-Fritzy,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
 Rick,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
 Jake_h,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
 Cal_Griff,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
@@ -13,27 +12,6 @@ Clark,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,em
 Carey,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
 Nick,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
 Brownie,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
-Connor,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
-Skeeter,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
 Chubbs,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
 Charlie,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
 numGames,14
-
-{
-            "Marty":0,
-            "Jason":0,
-            "Austin":0,
-            "Sam":0,
-            "Brad_J":0,
-            "Tommy":0,
-            "Rick":0,
-            "Jake_h":0,
-            "Cal_Griff":0,
-            "Clark":0,
-            "Carey":0,
-            "Nick":0,
-            "Brownie":0,
-            "Chubbs":0,
-            "Charlie":0
-            
-        }
