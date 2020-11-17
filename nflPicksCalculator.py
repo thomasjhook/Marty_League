@@ -432,11 +432,11 @@ def runInputValidator(fileName):
 
 
 
-# Run through test pool
-runTestPool()
+# # Run through test pool
+# runTestPool()
 
 # # Validate inputs
 # runInputValidator("week_9.txt")
 
-# # Call the main() function
-# main("week_9.txt", False)
+# Call the main() function
+main("week_10.txt", False)
