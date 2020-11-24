@@ -222,6 +222,7 @@ def calculateAndDisplayWinner(resultsDict, answersDict):
                     return resultString
                 else:
                     for name in namesToRemove:
+                        print(name)
                         resultsDict.pop(name)
             else:
                 print(Fore.GREEN + prefix + finalWinner + " wins " + amount + " with a tiebreaker score of " + finalWinnerTB)
@@ -283,7 +284,7 @@ def determineTieBreakerWinner(winnersList, answersDict, localCount, resultString
         return (False, 2, resultString, namesToRemove)
     
     # Case 3: 2 or more people with same tiebreaker tied for 2ND
-    elif localCount == 1 and len(tieBreakerList) == 2:
+    elif localCount == 1 and len(tieBreakerList) >= 2:
         print(Fore.GREEN + "2 or more people tied for second place!")
         resultString = resultString + "2 or more people tied for second place!" + "\n"
         for participant in tieBreakerList:
@@ -297,7 +298,7 @@ def determineTieBreakerWinner(winnersList, answersDict, localCount, resultString
         return (True, 0, resultString, [])
     
     # Case 4: 2 or more people with same tiebreaker tied for 3RD
-    elif localCount == 2 and len(tieBreakerList) == 2:
+    elif localCount == 2 and len(tieBreakerList) >= 2:
         print(Fore.GREEN + "2 or more people tied for third place!")
         resultString = resultString + "2 or more people tied for third place!" + "\n"
         for participant in tieBreakerList:
@@ -322,10 +323,9 @@ def determineTieBreakerWinner(winnersList, answersDict, localCount, resultString
 
 # Test pool launch pad. Call this function to initiate the test pool to run through
 # all available previous weeks data and compare it to the recorded results that
-# are currently being stored in global variables. Each week, Tom will need to add
-# a new global variable for that weeks answers and add the variable name to the
-# WEEK_NAME_DICT dictionary. If a week fails the test, the test pool will print an error
-# message and will terminate execution
+# are stored in testPool.json. Each week, Tom will need to add an entry to 
+# testPool.json for that weeks answers. If a week fails the test, the test pool 
+# will print an error message and will terminate execution
 
 def runTestPool():
     print("###########################")
@@ -432,11 +432,11 @@ def runInputValidator(fileName):
 
 
 
-# Run through test pool
-runTestPool()
+# # Run through test pool
+# runTestPool()
 
 # # Validate inputs
-# runInputValidator("week_9.txt")
+# runInputValidator("week_11.txt")
 
-# # Call the main() function
-# main("week_10.txt", False)
+# Call the main() function
+main("week_11.txt", False)

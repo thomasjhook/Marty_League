@@ -1,4 +1,4 @@
-answer,RAMS,TITANS,STEELERS,CARDINALS,RAIDERS,TEXANS,RAVENS,PANTHERS,DOLPHINS,COWBOYS,BROWNS,BEARS,SEAHAWKS,saints,100
+answer,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
 Marty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
 Jason,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
 Austin,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
@@ -14,7 +14,7 @@ Nick,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,emp
 Brownie,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
 Chubbs,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
 Charlie,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
-numGames,14
+numGames,13
 
 {
             "Marty":0,
