@@ -346,6 +346,9 @@ def runTestPool():
         # Call the functions to be tested to get the values to compare to global variables
         answers,results = initializeTestVariables(fileName)
 
+        ## Debug in case testing ever fails and you need to compare
+        # print("RESULTS: " + results)
+
         # initializeTestVariables() will catch an exception if it can't find the file
         # we are looking for and return empty dictionaries for "answers" and "results".
         # This should only ever happen if we are trying to open a week that does not have data yet.
@@ -364,7 +367,7 @@ def runTestPool():
         print("Running input validator for " + fileName + " ...")
         spellingResults = runInputValidator(fileName)
         if spellingResults:
-            print("Input validator completed. No mistakes were found. Continuing execution.")
+            print("Input validator completed. No mistakes were found. Continuing execution...")
         else:
             return
 
@@ -410,6 +413,8 @@ def getDictFromTestPool(weekNum):
     with open(test_file_path + "testPool.json") as testFile:
         data = json.load(testFile)
         testDict = data['TEST_POOL'][weekNum-offset]
+        ## Debug in case testing ever fails and you need to compare
+        # print(data)
     return testDict
 
 def runInputValidator(fileName):
@@ -434,12 +439,12 @@ def runInputValidator(fileName):
 
 
 
-# # Run through test pool
-# runTestPool()
+# Run through test pool
+runTestPool()
 
 # # Validate inputs
 # runInputValidator("week_11.txt")
 
-# Call the main() function
-main("week_11.txt", False)
+# # Call the main() function
+# main("week_11.txt", False)
  
