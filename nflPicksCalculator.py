@@ -13,12 +13,15 @@ THIRD_AMOUNT = "$40"
 THIRD_AMOUNT_INT = 40
 sender_email = "nflbettingleagueresults@gmail.com"
 smtp_server = "smtp.gmail.com"
+weeks_path = "2020/Weeks/"
+email_path = "email_list.txt"
+test_file_path = "2020/Test_Pool/"
 
 def main(inFile, verbose):
 
     # Dict to hold answers read in from txt file
     # {<name> : [pick1,pick2,...,pick10]}
-    answers = buildAnswersDict(inFile)
+    answers = buildAnswersDict(weeks_path + inFile)
 
     # Dict to hold number of correct answers per participant
     # {<name> : <numCorrectAnswers>}
@@ -81,8 +84,7 @@ def buildResultsString(results, answers):
 
 # This function returns a list of emails from a text file
 def generateEmailList():
-    inFile = open("email_list.txt")
-    
+    inFile = open(email_path)
     
     for line in inFile:
         line = line.strip()
@@ -395,7 +397,7 @@ def initializeTestVariables(inFile):
     answers = {}
     results = {}
     try:
-        answers = buildAnswersDict(inFile)
+        answers = buildAnswersDict(weeks_path + inFile)
     except:
         return {},{}
         
@@ -405,7 +407,7 @@ def initializeTestVariables(inFile):
 def getDictFromTestPool(weekNum):
     offset = 2
     testDict = {}
-    with open("testPool.json") as testFile:
+    with open(test_file_path + "testPool.json") as testFile:
         data = json.load(testFile)
         testDict = data['TEST_POOL'][weekNum-offset]
     return testDict
@@ -418,7 +420,7 @@ def runInputValidator(fileName):
     participantNames = ["jason","austin","sam","fritzy","brad_j","tommy","rick","clark","carey",
                         "nick","brownie","connor","marty","answer","numgames","empty","jake_h","cal_griff",
                         "charlie","chubbs","skeeter"]
-    inFile = open(fileName)
+    inFile = open(weeks_path + fileName)
     for line in inFile:
         line = line.strip()
         line = line.split(",")
@@ -440,3 +442,4 @@ def runInputValidator(fileName):
 
 # Call the main() function
 main("week_11.txt", False)
+ 
