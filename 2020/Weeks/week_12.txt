@@ -1,4 +1,4 @@
-answer,TEXANS,WASH,empty,BILLS,TITANS,VIKINGS,BROWNS,GIANTS,PATS,DOLPHINS,FALCONS,empty,empty,empty,empty,empty,100
+answer,TEXANS,WASH,STEELERS,BILLS,TITANS,VIKINGS,BROWNS,GIANTS,PATS,DOLPHINS,FALCONS,SAINTS,49ERS,CHIEFS,PACK,SEAHAWKS,40
 Marty,texans,cowboys,steelers,bills,colts,panthers,browns,giants,cardinals,dolphins,raiders,saints,rams,chiefs,pack,seahawks,52
 Jason,texans,wash,steelers,bills,titans,vikings,browns,giants,cardinals,dolphins,raiders,saints,rams,chiefs,pack,seahawks,50
 Austin,lions,cowboys,steelers,bills,colts,vikings,browns,giants,pats,dolphins,falcons,saints,rams,bucs,pack,seahawks,51
