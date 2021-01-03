@@ -231,6 +231,34 @@
             "Charlie":8
         },
         {
+            "Marty":10,
+            "Jason":12,
+            "Austin":11,
+            "Brad_J":11,
+            "Tommy":12,
+            "Rick":10,
+            "Cal_Griff":10,
+            "Clark":13,
+            "Carey":12,
+            "Nick":11,
+            "Charlie":11,
+            "Jake_h":11
+        },
+        {
+            "Marty":7,
+            "Jason":8,
+            "Austin":8,
+            "Brad_J":8,
+            "Tommy":10,
+            "Cal_Griff":9,
+            "Clark":9,
+            "Carey":10,
+            "Nick":10,
+            "Charlie":7,
+            "Jake_h":7
+            
+        },
+        {
             "Marty":0,
             "Jason":0,
             "Austin":0,
@@ -243,24 +271,6 @@
             "Nick":0,
             "Charlie":0,
             "Jake_h":0
-            
-        },
-        {
-            "Marty":13,
-            "Jason":13,
-            "Austin":13,
-            "Sam":13,
-            "Brad_J":13,
-            "Tommy":13,
-            "Rick":13,
-            "Jake_h":13,
-            "Cal_Griff":13,
-            "Clark":13,
-            "Carey":13,
-            "Nick":13,
-            "Brownie":13,
-            "Chubbs":13,
-            "Charlie":13
             
         }
    ]

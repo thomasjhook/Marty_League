@@ -1,0 +1,14 @@
+answer,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
+Marty,bucs,cowboys,pats,vikings,steelers,ravens,bills,seahawks,rams,colts,titans,raiders,chiefs,pack,saints,wash,45
+Jason,bucs,cowboys,jets,vikings,browns,ravens,bills,seahawks,rams,colts,titans,broncos,chiefs,pack,saints,eagles,43
+Austin,bucs,cowboys,pats,vikings,browns,ravens,dolphins,seahawks,cardinals,colts,titans,raiders,chargers,pack,saints,wash,48
+Brad_J,bucs,cowboys,pats,vikings,browns,ravens,bills,seahawks,cardinals,colts,titans,raiders,chargers,pack,saints,wash,44
+Tommy,bucs,giants,pats,vikings,browns,ravens,bills,seahawks,rams,colts,titans,raiders,chargers,bears,saints,eagles,40
+Rick,bucs,cowboys,pats,lions,browns,ravens,dolphins,seahawks,rams,colts,titans,raiders,chargers,bears,panthers,wash,49
+Cal_Griff,bucs,cowboys,pats,vikings,browns,ravens,bills,seahawks,rams,colts,titans,raiders,chargers,pack,saints,eagles,42
+Clark,bucs,cowboys,jets,vikings,browns,ravens,bills,seahawks,rams,colts,titans,broncos,chiefs,pack,saints,wash,42
+Carey,bucs,giants,pats,vikings,browns,ravens,bills,seahawks,rams,colts,titans,raiders,chargers,pack,saints,wash,47
+Nick,bucs,giants,pats,vikings,browns,ravens,bills,seahawks,cardinals,colts,titans,raiders,chiefs,pack,saints,wash,45
+Charlie,bucs,cowboys,pats,vikings,browns,ravens,bills,seahawks,cardinals,colts,titans,raiders,chargers,pack,saints,eagles,44
+Jake_h,bucs,cowboys,pats,vikings,browns,ravens,bills,seahawks,cardinals,colts,titans,raiders,chargers,pack,saints,wash,41
+numGames,16
