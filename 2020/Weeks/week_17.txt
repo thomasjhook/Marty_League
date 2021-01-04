@@ -1,4 +1,4 @@
-answer,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
+answer,BUCS,GIANTS,PATS,VIKINGS,BROWNS,RAVENS,BILLS,SEAHAWKS,RAMS,COTLS,TITANS,RAIDERS,CHARGERS,PACK,SAINTS,WASH,37
 Marty,bucs,cowboys,pats,vikings,steelers,ravens,bills,seahawks,rams,colts,titans,raiders,chiefs,pack,saints,wash,45
 Jason,bucs,cowboys,jets,vikings,browns,ravens,bills,seahawks,rams,colts,titans,broncos,chiefs,pack,saints,eagles,43
 Austin,bucs,cowboys,pats,vikings,browns,ravens,dolphins,seahawks,cardinals,colts,titans,raiders,chargers,pack,saints,wash,48
