@@ -182,7 +182,7 @@ def calculateAndDisplayWinner(resultsDict, answersDict):
     sameScoreTieBreakerValue = 1000
     prefix = "1st Place: "
     amount = FIRST_AMOUNT
-    tieBreakerScore = answersDict["answer"][int(answersDict["numGames"][0])]
+    tieBreakerScore = answersDict["answer"][-1]
     while localCount < 3:
         print(Style.RESET_ALL)
         if localCount == 1:
@@ -208,7 +208,7 @@ def calculateAndDisplayWinner(resultsDict, answersDict):
             print()
             for winner in winnersList:
                 for winnerKey in winner:
-                    participantTieBreaker = answersDict[winnerKey][int(answersDict["numGames"][0])]
+                    participantTieBreaker = answersDict[winnerKey][-1]
                     # print(winnerKey + "'s tie breaker score: " + str(participantTieBreaker))
                     participantDiff = abs(int(participantTieBreaker) - int(tieBreakerScore))
                     if participantDiff <= smallestDiff:
@@ -442,12 +442,12 @@ def runInputValidator(fileName):
 
 
 
-# Run through test pool
-runTestPool()
+# # Run through test pool
+# runTestPool()
 
 # # Validate inputs
 # runInputValidator("week_12.txt")
 
-# # Call the main() function
-# main("week_17.txt", False)
+# Call the main() function
+main("confidence.txt", False)
  

@@ -1,4 +1,4 @@
 answer,BEARS,100,COWBOYS,100,PACK,100,COLTS,100,BILLS,100,49ERS,100,RAMS,100,STEELERS,100,BUCS,100,TITANS,100,63
 Tommy,bears,0,cowboys,0,pack,8,colts,7,bills,0,49ers,5,rams,0,steelers,3,bucs,2,jags,0,59
-Austin,giants,10,falcons,9,pack,8,colts,7,dolphins,0,49ers,5,eagles,0,steelers,3,bucs,2,titans,0,51
+Austin,giants,10,falcons,9,pack,8,colts,7,dolphins,0,49ers,5,eagles,0,steelers,3,bucs,2,titans,0,60
 numGames,10
