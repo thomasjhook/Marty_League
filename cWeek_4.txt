@@ -1,0 +1,15 @@
+answer,PANTHERS,100,COLTS,100,BENGALS,100,BROWNS,100,SAINTS,100,VIKINGS,100,SEAHAWKS,100,BUCS,100,RAVENS,100,49ERS,100,BILLS,100,empty,100,RAMS,100,48
+Jason,cardinals,0,bears,0,bengals,0,cowboys,0,saints,0,texans,0,seahawks,0,bucs,0,ravens,0,49ers,0,raiders,0,chiefs,0,rams,0,47
+Austin,cardinals,0,colts,0,jags,0,cowboys,0,saints,0,vikings,0,seahawks,0,bucs,0,ravens,0,49ers,0,bills,0,chiefs,0,rams,0,55
+Sam,cardinals,0,colts,0,jags,0,cowboys,0,saints,0,texans,0,seahawks,0,bucs,0,ravens,0,49ers,0,bills,0,chiefs,0,rams,0,48
+Fritzy,cardinals,0,colts,0,bengals,0,cowboys,0,saints,0,texans,0,seahawks,0,bucs,0,ravens,0,49ers,0,bills,0,chiefs,0,rams,0,56
+Brad_J,cardinals,0,colts,0,bengals,0,cowboys,0,saints,0,texans,0,seahawks,0,bucs,0,ravens,0,49ers,0,bills,0,chiefs,0,rams,0,44
+Tommy,panthers,0,colts,0,jags,0,cowboys,0,saints,0,vikings,0,seahawks,0,bucs,0,ravens,0,49ers,0,raiders,0,chiefs,0,rams,0,53
+Rick,panthers,0,bears,0,jags,0,cowboys,0,saints,0,texans,0,seahawks,0,bucs,0,ravens,0,49ers,0,bills,0,chiefs,0,rams,0,45
+Clark,cardinals,0,bears,0,bengals,0,cowboys,0,saints,0,vikings,0,seahawks,0,bucs,0,ravens,0,49ers,0,raiders,0,chiefs,0,rams,0,48
+Carey,cardinals,0,colts,0,bengals,0,cowboys,0,saints,0,texans,0,seahawks,0,bucs,0,ravens,0,49ers,0,bills,0,chiefs,0,rams,0,48
+Nick,cardinals,0,bears,0,bengals,0,cowboys,0,saints,0,texans,0,seahawks,0,bucs,0,ravens,0,49ers,0,bills,0,chiefs,0,rams,0,47
+Brownie,cardinals,0,bears,0,bengals,0,cowboys,0,saints,0,texans,0,seahawks,0,bucs,0,ravens,0,49ers,0,bills,0,chiefs,0,rams,0,48
+Connor,cardinals,0,bears,0,bengals,0,cowboys,0,saints,0,texans,0,seahawks,0,bucs,0,ravens,0,eagles,0,bills,0,chiefs,0,rams,0,49
+Marty,cardinals,0,bears,0,jags,0,cowboys,0,saints,0,texans,0,seahawks,0,bucs,0,ravens,0,eagles,0,bills,0,chiefs,0,rams,0,47
+numGames,13

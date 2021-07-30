@@ -124,8 +124,12 @@ def displayParticipantsPicks(answersDict):
 # Helper function to return a string of values seperated by a comma and space, given a list.
 def buildPickString(answerList):
     pickStr = ""
-    for x in answerList:
-        pickStr = pickStr + x + ", "
+    for x in range(len(answerList) - 1):
+        if x % 2 == 0:
+            pickStr = pickStr + answerList[x] + ", "
+    
+    # Take away last comma on end of string
+    pickStr = pickStr[:-2]
 
     return pickStr
 
@@ -159,16 +163,15 @@ def buildResultsDict(answers):
     # the participant answer to the answer key to and store result in
     # another internal data structure (results)
     for x in answers:
-        numCorrect = 0
-        counter = 0
         if x != "answer" and x != "numGames":
-            for answer in answers[x]:
-                # Actual comparison to check participant x's
-                # answers against the answer key's answers
-                if (answer.lower() == answers["answer"][counter].lower()) and counter < int(answers["numGames"][0]):
-                    numCorrect = numCorrect + 1
-                
-                counter = counter + 1
+            numCorrect = 0
+            for y in range(int(answers["numGames"][0]) * 2):
+                if y % 2 == 0:
+                    # Actual comparison to check participant x's
+                    # answers against the answer key's answers
+                    if (answers[x][y].lower() == answers["answer"][y].lower()) and y < (int(answers["numGames"][0]) * 2):
+                        numCorrect = numCorrect + int(answers[x][y + 1])
+
             results[x] = numCorrect
     return results
 
@@ -341,7 +344,7 @@ def runTestPool():
     while weekNum != 0:
 
         # Build the file name
-        fileName = "week_" + str(weekNum) + ".txt"
+        fileName = "cWeek_" + str(weekNum) + ".txt"
 
         # Call the functions to be tested to get the values to compare to global variables
         answers,results = initializeTestVariables(fileName)
@@ -439,12 +442,12 @@ def runInputValidator(fileName):
 
 
 
-# # Run through test pool
-# runTestPool()
+# Run through test pool
+runTestPool()
 
 # # Validate inputs
 # runInputValidator("week_12.txt")
 
-# Call the main() function
-main("week_17.txt", False)
+# # Call the main() function
+# main("week_17.txt", False)
  
