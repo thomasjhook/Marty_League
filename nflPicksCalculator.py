@@ -3,32 +3,23 @@
 import json
 from colorama import init, Fore, Style
 import smtplib, ssl
+import defaultValues 
 init()
 
-FIRST_AMOUNT = "$220"
-FIRST_AMOUNT_INT = 220
-SECOND_AMOUNT = "$100"
-SECOND_AMOUNT_INT = 100
-THIRD_AMOUNT = "$40"
-THIRD_AMOUNT_INT = 40
-sender_email = "nflbettingleagueresults@gmail.com"
-smtp_server = "smtp.gmail.com"
-weeks_path = "2020/Weeks/"
-email_path = "email_list.txt"
-test_file_path = "2020/Test_Pool/"
+
 
 def main(inFile, verbose):
 
     # Dict to hold answers read in from txt file
     # {<name> : [pick1,pick2,...,pick10]}
-    answers = buildAnswersDict(weeks_path + inFile)
+    answers = buildAnswersDict(defaultValues.weeks_path + inFile)
 
     # Dict to hold number of correct answers per participant
     # {<name> : <numCorrectAnswers>}
     results = buildResultsDict(answers)
     
         
-    displayWinners(answers)
+    displayTeamWinners(answers)
 
     # Extra logging if parameter is True. I need to add some more verbose functionality
     if verbose:
@@ -64,10 +55,10 @@ def main(inFile, verbose):
         {resultString}"""
 
         context = ssl.create_default_context()
-        with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
-            server.login(sender_email, password)
+        with smtplib.SMTP_SSL(defaultValues.smtp_server, port, context=context) as server:
+            server.login(defaultValues.sender_email, password)
             for receiver_email in emailList:
-                server.sendmail(sender_email, receiver_email, message)
+                server.sendmail(defaultValues.sender_email, receiver_email, message)
 
 # This function builds the body of the email to be sent that contains the correct picks for the
 # participants along with 1ST, 2ND and 3RD place winners
@@ -84,7 +75,7 @@ def buildResultsString(results, answers):
 
 # This function returns a list of emails from a text file
 def generateEmailList():
-    inFile = open(email_path)
+    inFile = open(defaultValues.email_path)
     
     for line in inFile:
         line = line.strip()
@@ -95,7 +86,7 @@ def generateEmailList():
 # This function takes a dictionary (answersDict) with one of the keys being equal to "answer". It
 # will print the value stored in the answersDict["answer"] slot, which is a list of the winners
 # between two teams for the week.
-def displayWinners(answersDict):
+def displayTeamWinners(answersDict):
     winnersString = buildPickString(answersDict["answer"])
     print("Winning teams this week: ", winnersString)
 
@@ -170,92 +161,144 @@ def buildResultsDict(answers):
                     # Actual comparison to check participant x's
                     # answers against the answer key's answers
                     if (answers[x][y].lower() == answers["answer"][y].lower()) and y < (int(answers["numGames"][0]) * 2):
+                        # Add the confidence vote to the total for this participant
                         numCorrect = numCorrect + int(answers[x][y + 1])
 
             results[x] = numCorrect
     return results
 
 def calculateAndDisplayWinner(resultsDict, answersDict):
+    
     localCount = 0
     resultString = ""
     sameTieBreakerScore = False
-    sameScoreTieBreakerValue = 1000
     prefix = "1st Place: "
-    amount = FIRST_AMOUNT
+    amount = defaultValues.FIRST_AMOUNT
     tieBreakerScore = answersDict["answer"][-1]
+    
+    # localCount refers to the number of participants that will be paid out. This
+    # number needs to be adjusted as that changes. Ex: if 1st and 2nd get paid, 
+    # it needs to be "while localCount < 2". 
     while localCount < 3:
         print(Style.RESET_ALL)
+
+        # Set variables used for output string
         if localCount == 1:
             prefix = "2nd Place: "
-            amount = SECOND_AMOUNT
+            amount = defaultValues.SECOND_AMOUNT
         elif localCount == 2:
             prefix = "3rd Place: "
-            amount = THIRD_AMOUNT
+            amount = defaultValues.THIRD_AMOUNT
+
+        # Set default values for the current loop
         winnersList = []
-        smallestDiff = 100
+        tieBreakerList = []
+        smallestDiff = defaultValues.smallestDiff
         finalWinner = ""
         finalWinnerTB = ""
+
+        # Get the highest value from the results dictionary
         highestCorrectPicks = max(resultsDict.items(), key=lambda x: x[1])
+        
+        # Iterate through the participants to see who has the highest score. Keep
+        # in mind there can be ties
         for participant in resultsDict:
             if resultsDict[participant] == highestCorrectPicks[1]:
-                winnersList.append({participant : resultsDict[participant]})
+                # Add participant name to winnersList
+                winnersList.append(participant)
         
+        # This means there are at least 2 people tied for the current position
+        # being calculated (Ex: 1st, 2nd or 3rd)
         if len(winnersList) > 1:
             print("There is a tie with ", str(highestCorrectPicks[1])," correct picks. Result will be determined based on tie breaker score")
+
+            # Store string in variable to be used for email later
             resultString = resultString + "There is a tie with " + str(highestCorrectPicks[1]) + " correct picks. Result will be determined based on tie breaker score" + "\n"
+
             print("Tiebreaker score: " + str(tieBreakerScore))
+
+            # Store string in variable to be used for email later
             resultString = resultString + "Tiebreaker score: " + str(tieBreakerScore) + "\n"
             print()
+
+            # Iterate through the participants who have tied
             for winner in winnersList:
-                for winnerKey in winner:
-                    participantTieBreaker = answersDict[winnerKey][-1]
-                    # print(winnerKey + "'s tie breaker score: " + str(participantTieBreaker))
-                    participantDiff = abs(int(participantTieBreaker) - int(tieBreakerScore))
-                    if participantDiff <= smallestDiff:
-                        if participantDiff == smallestDiff:
-                            # print(Fore.YELLOW + "We have a problem. Both tiebreaker scores were the same value away from actual tiebreaker")
-                            print(Style.RESET_ALL)
+
+                # Get the participants tie breaker score
+                participantTieBreaker = answersDict[winner][-1]
+                # print(winnerKey + "'s tie breaker score: " + str(participantTieBreaker))
+
+                # Calculate the difference between the participants tie breaker score (participantTieBreaker)
+                # and the real tie breaker score (tieBreakerScore)
+                participantDiff = abs(int(participantTieBreaker) - int(tieBreakerScore))
+
+                # Check if that difference is smaller than the smallest difference we have 
+                # calculated so far. If so, then this participant will be in the lead.
+                if participantDiff <= smallestDiff:
+
+                    # If we have two participants the same distance away from the tie breaker score
+                    # Then we have to do do some special logic to determine the payouts. Also if this is the 
+                    # first tie breaker play we are comparing we automatically need to add them to the tieBreakerList
+                    # Then we have a check to only call determineTieBreakerPayout if that list is larger than 1
+                    if participantDiff == smallestDiff or smallestDiff == defaultValues.smallestDiff:
+                        # print(Fore.YELLOW + "We have a problem. Both tiebreaker scores were the same value away from actual tiebreaker")
+                        print(Style.RESET_ALL)
+                        # Add the participant to the list of tie breakers to be passed to determineTieBreakerPayout
+                        tieBreakerList.append(winner)
+                        if (len(tieBreakerList) > 1):
                             sameTieBreakerScore = True
-                            sameScoreTieBreakerValue = participantDiff
-                        else:
-                            smallestDiff = participantDiff
-                            finalWinner = winnerKey
-                            finalWinnerTB = str(participantTieBreaker)
+
+                    # One of the participants had a tiebreaker score that was a smaller distance away
+                    # from the real tiebreaker score than the other participants. Clear the 
+                    # tieBreakerList, add the current participant and continue processing    
+                    else:
+                        tieBreakerList.clear()
+                        tieBreakerList.append(winner)
+                        finalWinner = winner
+                        finalWinnerTB = str(participantTieBreaker)
+                        sameTieBreakerScore = False
+                    smallestDiff = participantDiff
+
+            # This value is set if we have more than 1 participant in the tieBreakerList list.
+            # This means we need to determine the payout for the players who have tied and decide
+            # if we need to continue processing or not
             if sameTieBreakerScore:
-                shouldTerminate, localCount, resultString, namesToRemove = determineTieBreakerWinner(winnersList, answersDict, localCount, resultString, tieBreakerScore, sameScoreTieBreakerValue)
+                shouldTerminate, localCount, resultString, namesToRemove = determineTieBreakerPayout(tieBreakerList, localCount, resultString)
+
+                # We had at least as many players tie as there are payouts
+                # (Ex: 3 players tied for 1st and only 3 are payed out)
                 if shouldTerminate:
                     return resultString
+                
+                # If we are to continue processing. Remove the names who tied and have had their 
+                # payouts determined and start the loop over with the remaining resultsDict
                 else:
                     for name in namesToRemove:
                         print(name)
                         resultsDict.pop(name)
+
+            # We were able to determine a clear winner based off the tie breaker score.
             else:
                 print(Fore.GREEN + prefix + finalWinner + " wins " + amount + " with a tiebreaker score of " + finalWinnerTB)
                 resultString = resultString + prefix + finalWinner + " wins " + amount + " with a tiebreaker score of " + finalWinnerTB + "\n"
                 resultsDict.pop(finalWinner)
                 localCount = localCount + 1
+
+        # We had no ties for this cycle in the loop. Display the winner
         elif len(winnersList) == 1:
-            for winner in winnersList:
-                for winnerKey in winner:
-                    print(Fore.GREEN + prefix + winnerKey + " wins " + amount + " with " + str(winner[winnerKey]) + " correct picks!")
-                    resultString = resultString + prefix + winnerKey + " wins " + amount + " with " + str(winner[winnerKey]) + " correct picks!" + "\n"
-                    resultsDict.pop(winnerKey)
-                    localCount = localCount + 1
+            print(Fore.GREEN + prefix + winnersList[0] + " wins " + amount + " with " + str(highestCorrectPicks[1]) + " correct picks!")
+            resultString = resultString + prefix + winnersList[0] + " wins " + amount + " with " + str(highestCorrectPicks[1]) + " correct picks!" + "\n"
+            resultsDict.pop(winnersList[0])
+            localCount = localCount + 1
         else:
             print("Error occured populating winners list")
 
     return resultString
     
-# Determines a winner for 1ST, 2ND or 3RD if any of them have a tie in number of correct picks
-# AND the same tie breaker score
-def determineTieBreakerWinner(winnersList, answersDict, localCount, resultString, tieBreakerScore, sameScoreTieBreakerValue):
-    tieBreakerList = []
-    for winner in winnersList:
-        for winnerKey in winner:
-            participantTieBreaker2 = answersDict[winnerKey][int(answersDict["numGames"][0])]
-            participantDiff2 = abs(int(participantTieBreaker2) - int(tieBreakerScore))
-            if participantDiff2 == sameScoreTieBreakerValue:
-                tieBreakerList.append(winnerKey)
+# Determines a payout for 1ST, 2ND or 3RD if any of them have a tie in number of correct picks
+# AND the same tie breaker score. Also will tell us if we need to continue calculating winners
+# based on how many we have calculated so far (localCount) and how many are tied
+def determineTieBreakerPayout(tieBreakerList, localCount, resultString):
     
     winnerNameString = ""
     # Case 1: 3 or more people with same tiebreaker tied for 1ST
@@ -265,7 +308,7 @@ def determineTieBreakerWinner(winnersList, answersDict, localCount, resultString
         for participant in tieBreakerList:
             winnerNameString = winnerNameString + participant + ", "
         winnerNameString = winnerNameString[:-2]
-        amountWon = (FIRST_AMOUNT_INT + SECOND_AMOUNT_INT + THIRD_AMOUNT_INT) / len(tieBreakerList)
+        amountWon = (defaultValues.FIRST_AMOUNT_INT + defaultValues.SECOND_AMOUNT_INT + defaultValues.THIRD_AMOUNT_INT) / len(tieBreakerList)
         print(winnerNameString + " each win $" + str(amountWon))
         resultString = resultString + winnerNameString + " each win $" + str(amountWon) + "\n"
         print(Style.RESET_ALL)
@@ -281,7 +324,7 @@ def determineTieBreakerWinner(winnersList, answersDict, localCount, resultString
             winnerNameString = winnerNameString + participant + ", "
             namesToRemove.append(participant)
         winnerNameString = winnerNameString[:-2]
-        amountWon = (FIRST_AMOUNT_INT + SECOND_AMOUNT_INT) / len(tieBreakerList)
+        amountWon = (defaultValues.FIRST_AMOUNT_INT + defaultValues.SECOND_AMOUNT_INT) / len(tieBreakerList)
         print(winnerNameString + " each win $" + str(amountWon))
         resultString = resultString + winnerNameString + " each win $" + str(amountWon) + "\n"
         print(Style.RESET_ALL)
@@ -295,7 +338,7 @@ def determineTieBreakerWinner(winnersList, answersDict, localCount, resultString
         for participant in tieBreakerList:
             winnerNameString = winnerNameString + participant + ", "
         winnerNameString = winnerNameString[:-2]
-        amountWon = (SECOND_AMOUNT_INT + THIRD_AMOUNT_INT) / len(tieBreakerList)
+        amountWon = (defaultValues.SECOND_AMOUNT_INT + defaultValues.THIRD_AMOUNT_INT) / len(tieBreakerList)
         print(winnerNameString + " each win $" + str(amountWon))
         resultString = resultString + winnerNameString + " each win $" + str(amountWon) + "\n"
         print(Style.RESET_ALL)
@@ -309,7 +352,7 @@ def determineTieBreakerWinner(winnersList, answersDict, localCount, resultString
         for participant in tieBreakerList:
             winnerNameString = winnerNameString + participant + ", "
         winnerNameString = winnerNameString[:-2]
-        amountWon = THIRD_AMOUNT_INT / len(tieBreakerList)
+        amountWon = defaultValues.THIRD_AMOUNT_INT / len(tieBreakerList)
         print(winnerNameString + " each win $" + str(amountWon))
         resultString = resultString + winnerNameString + " each win $" + str(amountWon) + "\n"
         print(Style.RESET_ALL)
@@ -403,7 +446,7 @@ def initializeTestVariables(inFile):
     answers = {}
     results = {}
     try:
-        answers = buildAnswersDict(weeks_path + inFile)
+        answers = buildAnswersDict(defaultValues.weeks_path + inFile)
     except:
         return {},{}
         
@@ -413,7 +456,7 @@ def initializeTestVariables(inFile):
 def getDictFromTestPool(weekNum):
     offset = 2
     testDict = {}
-    with open(test_file_path + "testPool.json") as testFile:
+    with open(defaultValues.test_file_path + "testPool.json") as testFile:
         data = json.load(testFile)
         testDict = data['TEST_POOL'][weekNum-offset]
         ## Debug in case testing ever fails and you need to compare
@@ -428,7 +471,7 @@ def runInputValidator(fileName):
     participantNames = ["jason","austin","sam","fritzy","brad_j","tommy","rick","clark","carey",
                         "nick","brownie","connor","marty","answer","numgames","empty","jake_h","cal_griff",
                         "charlie","chubbs","skeeter"]
-    inFile = open(weeks_path + fileName)
+    inFile = open(defaultValues.weeks_path + fileName)
     for line in inFile:
         line = line.strip()
         line = line.split(",")
