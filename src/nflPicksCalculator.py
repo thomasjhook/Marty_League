@@ -227,7 +227,6 @@ def calculateAndDisplayWinner(resultsDict, tieBreakerScore):
 
             # Store string in variable to be used for email later
             resultString = resultString + "Tiebreaker score: " + str(tieBreakerScore) + "\n"
-            print()
 
             # Iterate through the participants who have tied
             for winner in winnersList:
@@ -511,5 +510,6 @@ def runInputValidator(fileName):
 # runInputValidator("week_12.txt")
 
 # Call the main() function
-# main("confidence.txt", False)
-#
+# This needs to be commented out for unit tests to run properly
+main("week_13.txt", False)
+
