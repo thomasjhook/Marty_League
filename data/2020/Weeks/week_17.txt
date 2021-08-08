@@ -12,3 +12,4 @@ Nick,bucs,giants,pats,vikings,browns,ravens,bills,seahawks,cardinals,colts,titan
 Charlie,bucs,cowboys,pats,vikings,browns,ravens,bills,seahawks,cardinals,colts,titans,raiders,chargers,pack,saints,eagles,44
 Jake_h,bucs,cowboys,pats,vikings,browns,ravens,bills,seahawks,cardinals,colts,titans,raiders,chargers,pack,saints,wash,41
 numGames,16
+format,no_confidence

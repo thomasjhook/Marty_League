@@ -13,3 +13,4 @@ Brownie,bears,cowboys,pack,colts,bills,49ers,rams,steelers,bucs,titans,48
 Connor,bears,cowboys,pack,vikings,bills,49ers,rams,steelers,bucs,titans,44
 Marty,giants,falcons,pack,vikings,bills,49ers,rams,broncos,bucs,titans,34
 numGames,10
+format,no_confidence

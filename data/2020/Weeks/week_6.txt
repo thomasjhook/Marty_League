@@ -18,3 +18,4 @@ Skeeter,bears,colts,jags,falcons,wash,ravens,steelers,titans,pats,dolphins,bucs,
 Chubbs,panthers,colts,lions,vikings,giants,ravens,steelers,titans,pats,dolphins,pack,rams,chiefs,cowboys,57
 Charlie,bears,colts,lions,vikings,wash,ravens,steelers,titans,pats,dolphins,bucs,rams,bills,cardinals,55
 numGames,14
+format,no_confidence

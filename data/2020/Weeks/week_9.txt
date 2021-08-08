@@ -15,3 +15,4 @@ Brownie,texans,giants,ravens,vikings,titans,chiefs,bills,broncos,raiders,cardina
 Chubbs,texans,wash,ravens,vikings,bears,chiefs,seahawks,broncos,raiders,cardinals,steelers,bucs,pats,38
 Charlie,texans,wash,ravens,vikings,bears,chiefs,seahawks,broncos,chargers,cardinals,steelers,bucs,pats,40
 numGames,13
+format,no_confidence

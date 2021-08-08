@@ -18,3 +18,4 @@ Skeeter,rams,bills,steelers,cardinals,chiefs,texans,ravens,falcons,49ers,cowboys
 Chubbs,rams,bills,steelers,cardinals,chiefs,texans,ravens,panthers,49ers,cowboys,browns,pats,seahawks,saints,54
 Charlie,rams,bills,steelers,cardinals,chiefs,jags,ravens,panthers,49ers,cowboys,browns,pats,seahawks,saints,52
 numGames,14
+format,no_confidence

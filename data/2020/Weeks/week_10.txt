@@ -15,3 +15,4 @@ Brownie,browns,lions,bucs,eagles,pack,bills,dolphins,raiders,rams,steelers,saint
 Chubbs,browns,lions,bucs,eagles,pack,bills,dolphins,raiders,seahawks,steelers,saints,ravens,vikings,47
 Charlie,browns,wash,bucs,eagles,pack,cardinals,dolphins,raiders,rams,steelers,saints,ravens,bears,40
 numGames,13
+format,no_confidence

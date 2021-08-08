@@ -1,4 +1,9 @@
 # Deafult Values
+from enum import Enum
+
+class Format(Enum):
+    NO_CONFIDENCE_VOTE = 1
+    CONFIDENCE_VOTE = 2
 
 FIRST_AMOUNT = "$220"
 FIRST_AMOUNT_INT = 220

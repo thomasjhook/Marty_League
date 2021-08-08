@@ -11,13 +11,18 @@ init()
 
 def main(inFile, verbose):
 
+    # Default the fileFormat to use Confidence vote function
+    fileFormat = defaultValues.Format.CONFIDENCE_VOTE
     # Dict to hold answers read in from txt file
     # {<name> : [pick1,pick2,...,pick10]}
-    answers = buildAnswersDict(defaultValues.weeks_path + inFile)
+    answers, fileFormat = buildAnswersDict(defaultValues.weeks_path + inFile)
 
     # Dict to hold number of correct answers per participant
     # {<name> : (<numCorrectAnswers>, <tieBreakerScore>)}
-    results = buildResultsDict(answers)
+    if fileFormat == defaultValues.Format.CONFIDENCE_VOTE:
+        results = buildResultsDict(answers)
+    else:
+        results = buildResultsDictWithoutConfidenceVote(answers)
     
         
     displayTeamWinners(answers)
@@ -138,17 +143,31 @@ def buildAnswersDict(inFile):
     for line in inFile:
         line = line.strip()
         line = line.split(",")
-        
-        # Inserts a value into the dictionary
-        # keyed by the name of the participant
-        # with a value of their picks 
-        answers[line[0]] = line[1:]
-    
-    return answers
 
+        # Don't add the format to the answers dict. Just set the global format
+        # variable
+        if line[0] == 'format':
+            format = setFormat(line[1])
+        else:
+            # Inserts a value into the dictionary
+            # keyed by the name of the participant
+            # with a value of their picks
+            answers[line[0]] = line[1:]
+
+    
+    return answers, format
+
+def setFormat(format):
+    print("Setting format to: ", format)
+    if format.lower() == "confidence":
+        fileFormat = defaultValues.Format.CONFIDENCE_VOTE
+    else:
+        fileFormat = defaultValues.Format.NO_CONFIDENCE_VOTE
+    return fileFormat
 
 # This function takes a dictionary (answers) and iterates through to compare everyone's picks to the
-# correct picks. This is the real meat of the program
+# correct picks. This is the confidence vote version of the function so if the participant gets a pick
+# correct, instead of just getting 1 point. They will get the confidence points they assigned to the game.
 def buildResultsDict(answers):
     results = {}
     
@@ -165,6 +184,32 @@ def buildResultsDict(answers):
                     if (answers[x][y].lower() == answers["answer"][y].lower()) and y < (int(answers["numGames"][0]) * 2):
                         # Add the confidence vote to the total for this participant
                         numCorrect = numCorrect + int(answers[x][y + 1])
+
+            # results format: {"<participantName>" : (<totalPoints>, <tieBreakerScore>)}
+            results[x] = (numCorrect, int(answers[x][-1]))
+
+    return results
+
+
+# This function takes a dictionary (answers) and iterates through to compare everyone's picks to the
+# correct picks. This is the NON-confidence vote version of the function. So if a user gets a pick correct they
+# simply get 1 point added to their total
+def buildResultsDictWithoutConfidenceVote(answers):
+    results = {}
+
+    # Iterate through internal data structure (answers) and compare
+    # the participant answer to the answer key to and store result in
+    # another internal data structure (results)
+    for x in answers:
+        if x != "answer" and x != "numGames" and x != "format":
+            numCorrect = 0
+            for y in range(int(answers["numGames"][0])):
+                # Actual comparison to check participant x's
+                # answers against the answer key's answers
+                if (answers[x][y].lower() == answers["answer"][y].lower()) \
+                        and y < (int(answers["numGames"][0])):
+                    # Add the confidence vote to the total for this participant
+                    numCorrect = numCorrect + 1
 
             # results format: {"<participantName>" : (<totalPoints>, <tieBreakerScore>)}
             results[x] = (numCorrect, int(answers[x][-1]))
@@ -488,7 +533,7 @@ def runInputValidator(fileName):
                  "dolphins","pats","jets","steelers","titans"]
     participantNames = ["jason","austin","sam","fritzy","brad_j","tommy","rick","clark","carey",
                         "nick","brownie","connor","marty","answer","numgames","empty","jake_h","cal_griff",
-                        "charlie","chubbs","skeeter"]
+                        "charlie","chubbs","skeeter", "format", "confidence", "no_confidence"]
     inFile = open(defaultValues.weeks_path + fileName)
     for line in inFile:
         line = line.strip()
@@ -511,5 +556,5 @@ def runInputValidator(fileName):
 
 # Call the main() function
 # This needs to be commented out for unit tests to run properly
-main("week_13.txt", False)
+# main("week_2.txt", False)
 

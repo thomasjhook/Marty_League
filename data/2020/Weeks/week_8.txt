@@ -18,3 +18,4 @@ Skeeter,ravens,rams,chiefs,pack,colts,raiders,titans,pats,chargers,49ers,saints,
 Chubbs,ravens,rams,chiefs,pack,lions,browns,titans,bills,chargers,seahawks,saints,eagles,bucs,49
 Charlie,steelers,rams,chiefs,pack,colts,raiders,titans,bills,chargers,seahawks,saints,eagles,bucs,50
 numGames,13
+format,no_confidence

@@ -11,3 +11,4 @@ Nick,bucs,cardinals,dolphins,ravens,chiefs,wash,browns,bears,texans,steelers,cha
 Charlie,bucs,cardinals,dolphins,ravens,chiefs,wash,browns,bears,texans,colts,chargers,eagles,rams,titans,bills,47
 Jake_h,bucs,cardinals,dolphins,ravens,chiefs,wash,browns,bears,texans,colts,chargers,eagles,rams,titans,bills,45
 numGames,15
+format,no_confidence

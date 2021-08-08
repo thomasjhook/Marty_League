@@ -15,3 +15,4 @@ Brownie,steelers,panthers,texans,ravens,colts,browns,saints,wash,chargers,dolphi
 Chubbs,steelers,lions,texans,ravens,colts,browns,falcons,bengals,chargers,dolphins,vikings,chiefs,bucs,47
 Charlie,steelers,panthers,pats,ravens,colts,browns,falcons,bengals,chargers,dolphins,vikings,chiefs,bucs,49
 numGames,13
+format,no_confidence

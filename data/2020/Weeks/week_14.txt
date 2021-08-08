@@ -11,3 +11,4 @@ Carey,titans,bucs,chiefs,panthers,bears,giants,cowboys,colts,seahawks,pack,charg
 Nick,titans,bucs,chiefs,panthers,texans,cardinals,cowboys,colts,seahawks,pack,falcons,49ers,saints,bills,ravens,48
 Charlie,titans,bucs,chiefs,panthers,texans,giants,cowboys,colts,seahawks,pack,falcons,49ers,saints,bills,browns,49
 numGames,15
+format,no_confidence

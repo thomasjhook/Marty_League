@@ -15,3 +15,4 @@ Brownie,lions,wash,steelers,bills,titans,vikings,browns,giants,cardinals,dolphin
 Chubbs,lions,cowboys,steelers,bills,colts,vikings,jags,giants,cardinals,dolphins,raiders,saints,rams,chiefs,pack,seahawks,47
 Charlie,texans,cowboys,steelers,bills,colts,vikings,browns,giants,cardinals,dolphins,raiders,saints,rams,chiefs,pack,seahawks,48
 numGames,16
+format,no_confidence

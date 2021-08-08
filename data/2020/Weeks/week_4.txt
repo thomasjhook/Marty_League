@@ -13,3 +13,4 @@ Brownie,cardinals,bears,bengals,cowboys,saints,texans,seahawks,bucs,ravens,49ers
 Connor,cardinals,bears,bengals,cowboys,saints,texans,seahawks,bucs,ravens,eagles,bills,chiefs,rams,49
 Marty,cardinals,bears,jags,cowboys,saints,texans,seahawks,bucs,ravens,eagles,bills,chiefs,rams,47
 numGames,13
+format,no_confidence

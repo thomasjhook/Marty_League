@@ -12,3 +12,4 @@ Carey,titans,raiders,vikings,dolphins,colts,bears,saints,seahawks,rams,chargers,
 Nick,titans,raiders,vikings,dolphins,colts,lions,saints,seahawks,cardinals,pats,pack,chiefs,steelers,bills,ravens,44
 Charlie,titans,raiders,vikings,dolphins,colts,lions,saints,seahawks,rams,pats,pack,chiefs,steelers,bills,ravens,43
 numGames,15
+format,no_confidence

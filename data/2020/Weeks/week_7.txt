@@ -18,3 +18,4 @@ Skeeter,titans,wash,bills,saints,chargers,pack,browns,falcons,seahawks,pats,chie
 Chubbs,steelers,cowboys,bills,saints,chargers,pack,browns,lions,seahawks,pats,chiefs,bucs,rams,44
 Charlie,titans,wash,bills,saints,chargers,texans,bengals,falcons,seahawks,pats,chiefs,bucs,bears,48
 numGames,13
+format,no_confidence

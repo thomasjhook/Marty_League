@@ -12,3 +12,4 @@ Nick,bills,pack,colts,titans,vikings,wash,dolphins,ravens,bucs,cowboys,cardinals
 Charlie,bills,pack,colts,titans,vikings,seahawks,dolphins,ravens,bucs,49ers,cardinals,rams,chiefs,browns,steelers,38
 Jake_h,bills,pack,colts,titans,vikings,seahawks,dolphins,ravens,bucs,49ers,cardinals,rams,chiefs,browns,steelers,42
 numGames,15
+format,no_confidence
