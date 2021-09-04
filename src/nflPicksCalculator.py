@@ -1,5 +1,6 @@
-# Program to calculate number of correct picks on Sunday
-
+# Engineer: Thomas Hook
+# Description: This program calculates the number of correct picks given
+# .txt file containing participants answers along with an answer key
 import json
 from colorama import init, Fore, Style
 import smtplib, ssl
