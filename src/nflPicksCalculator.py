@@ -26,11 +26,11 @@ def main(inFile, verbose):
         results = buildResultsDictWithoutConfidenceVote(answers)
     
         
-    displayTeamWinners(answers)
+    displayTeamWinners(answers, fileFormat)
 
     # Extra logging if parameter is True. I need to add some more verbose functionality
     if verbose:
-        displayParticipantsPicks(answers)
+        displayParticipantsPicks(answers, fileFormat)
             
     # Output results of the week which includes all the participants correct picks along
     # with the winners of 1ST, 2ND and 3RD place. This function also builds the body of the email to be sent
@@ -94,8 +94,8 @@ def generateEmailList():
 # This function takes a dictionary (answersDict) with one of the keys being equal to "answer". It
 # will print the value stored in the answersDict["answer"] slot, which is a list of the winners
 # between two teams for the week.
-def displayTeamWinners(answersDict):
-    winnersString = buildPickString(answersDict["answer"])
+def displayTeamWinners(answersDict, fileFormat):
+    winnersString = buildPickString(answersDict["answer"], fileFormat)
     print("Winning teams this week: ", winnersString)
 
 
@@ -113,18 +113,21 @@ def displayResults(resultsDict):
 
 # This function takes a dictionary (answersDict) and displays everyones picks for the week. It will
 # exclude the "answer" key and will only be called if Verbose logging is on
-def displayParticipantsPicks(answersDict):
+def displayParticipantsPicks(answersDict, fileFormat):
     for x in answersDict:
         if x != "answer":
-            answerStr = buildPickString(answersDict[x])
+            answerStr = buildPickString(answersDict[x], fileFormat)
             print(x, ":", answerStr)
 
 
 # Helper function to return a string of values seperated by a comma and space, given a list.
-def buildPickString(answerList):
+def buildPickString(answerList, fileFormat):
     pickStr = ""
     for x in range(len(answerList) - 1):
-        if x % 2 == 0:
+        if fileFormat == defaultValues.Format.CONFIDENCE_VOTE:
+            if x % 2 == 0:
+                pickStr = pickStr + answerList[x] + ", "
+        else:
             pickStr = pickStr + answerList[x] + ", "
     
     # Take away last comma on end of string
@@ -171,7 +174,6 @@ def setFormat(format):
 # correct, instead of just getting 1 point. They will get the confidence points they assigned to the game.
 def buildResultsDict(answers):
     results = {}
-    
     # Iterate through internal data structure (answers) and compare
     # the participant answer to the answer key to and store result in
     # another internal data structure (results)
@@ -197,7 +199,6 @@ def buildResultsDict(answers):
 # simply get 1 point added to their total
 def buildResultsDictWithoutConfidenceVote(answers):
     results = {}
-
     # Iterate through internal data structure (answers) and compare
     # the participant answer to the answer key to and store result in
     # another internal data structure (results)
@@ -231,7 +232,7 @@ def calculateAndDisplayWinner(resultsDict, tieBreakerScore):
     # localCount refers to the number of participants that will be paid out. This
     # number needs to be adjusted as that changes. Ex: if 1st and 2nd get paid, 
     # it needs to be "while localCount < 2". 
-    while localCount < 3:
+    while localCount < 2:
         print(Style.RESET_ALL)
 
         # Set variables used for output string
@@ -391,7 +392,7 @@ def determineTieBreakerPayout(tieBreakerList, localCount, resultString, finalRes
         resultString = resultString + winnerNameString + " each win $" + str(amountWon) + "\n"
         print(Style.RESET_ALL)
         winnerNameString = ""
-        return (False, 2, resultString, namesToRemove, finalResultsDict)
+        return (True, 2, resultString, namesToRemove, finalResultsDict)
     
     # Case 3: 2 or more people with same tiebreaker tied for 2ND
     elif localCount == 1 and len(tieBreakerList) >= 2:
@@ -531,10 +532,11 @@ def runInputValidator(fileName):
     teamNames = ["cardinals","falcons","panthers","bears","cowboys","lions","pack","rams","vikings",
                  "saints","giants","eagles","49ers","seahawks","bucs","wash","ravens","bills",
                  "bengals","browns","broncos","texans","colts","jags","chiefs","raiders","chargers",
-                 "dolphins","pats","jets","steelers","titans"]
+                 "dolphins","pats","jets","steelers","titans","michigan","washington","texas","arkansas",
+                 "iowa","isu","utah","byu","buffalo","nebraska"]
     participantNames = ["jason","austin","sam","fritzy","brad_j","tommy","rick","clark","carey",
                         "nick","brownie","connor","marty","answer","numgames","empty","jake_h","cal_griff",
-                        "charlie","chubbs","skeeter", "format", "confidence", "no_confidence"]
+                        "charlie","chubbs","skeeter", "format", "confidence", "no_confidence", "ron"]
     inFile = open(defaultValues.weeks_path + fileName)
     for line in inFile:
         line = line.strip()
@@ -544,6 +546,7 @@ def runInputValidator(fileName):
                 print(Fore.RED + "You made a typo when entering " + entry + " for " + line[0] + " in " + fileName)
                 print(Style.RESET_ALL)
                 return False
+    print(Fore.GREEN + "Inputs are valid")
 
     return True
 
@@ -553,9 +556,9 @@ def runInputValidator(fileName):
 # runTestPool()
 
 # # Validate inputs
-# runInputValidator("week_12.txt")
+# runInputValidator("week_1.txt")
 
 # Call the main() function
 # This needs to be commented out for unit tests to run properly
-# main("week_2.txt", False)
+main("week_1.txt", False)
 
