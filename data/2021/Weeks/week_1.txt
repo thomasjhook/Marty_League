@@ -1,7 +1,7 @@
-answer,michigan,arkansas,iowa,byu,nebraska,seahawks,texans,eagles,chargers,steelers,49ers,bengals,panthers,cardinals,empty,empty,empty,empty,empty,100
+answer,michigan,arkansas,iowa,byu,nebraska,seahawks,texans,eagles,chargers,steelers,49ers,bengals,panthers,cardinals,chiefs,dolphins,broncos,saints,rams,raiders,60
 Marty,michigan,texas,iowa,byu,nebraska,colts,jags,falcons,chargers,bills,49ers,vikings,panthers,titans,chiefs,pats,broncos,pack,rams,raiders,44
 Jason,michigan,texas,iowa,utah,nebraska,seahawks,jags,falcons,wash,bills,49ers,vikings,panthers,titans,chiefs,pats,broncos,pack,rams,ravens,47
-Austin,washington,texas,iowa,byu,nebraska,seahawks,texas,falcons,wash,bills,lions,vikings,panthers,titans,chiefs,pats,giants,pack,rams,ravens,48
+Austin,washington,texas,iowa,byu,nebraska,seahawks,texans,falcons,wash,bills,lions,vikings,panthers,titans,chiefs,pats,giants,pack,rams,ravens,48
 Brad_J,michigan,texas,iowa,byu,nebraska,seahawks,texans,falcons,wash,bills,49ers,vikings,panthers,titans,chiefs,pats,broncos,pack,rams,ravens,44
 Tommy,michigan,texas,iowa,byu,nebraska,colts,jags,eagles,chargers,bills,49ers,bengals,panthers,titans,chiefs,dolphins,giants,pack,bears,raiders,51
 Rick,michigan,texas,iowa,utah,nebraska,seahawks,jags,falcons,chargers,bills,49ers,vikings,panthers,titans,chiefs,dolphins,broncos,pack,bears,ravens,44
@@ -10,5 +10,5 @@ Clark,michigan,texas,isu,byu,nebraska,seahawks,jags,eagles,wash,bills,49ers,viki
 Carey,michigan,texas,iowa,utah,nebraska,seahawks,jags,falcons,wash,bills,49ers,vikings,panthers,titans,chiefs,pats,broncos,pack,rams,ravens,55
 Nick,michigan,texas,isu,utah,nebraska,seahawks,jags,falcons,wash,bills,49ers,bengals,panthers,cardinals,chiefs,dolphins,broncos,pack,rams,raiders,50
 Ron,michigan,texas,iowa,utah,nebraska,seahawks,jags,falcons,wash,bills,49ers,vikings,panthers,titans,chiefs,pats,giants,pack,rams,48
-numGames,19
+numGames,20
 format,no_confidence
