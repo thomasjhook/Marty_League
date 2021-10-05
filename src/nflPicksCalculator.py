@@ -534,7 +534,8 @@ def runInputValidator(fileName):
                  "bengals","browns","broncos","texans","colts","jags","chiefs","raiders","chargers",
                  "dolphins","pats","jets","steelers","titans","michigan","washington","texas","arkansas",
                  "iowa","isu","utah","byu","buffalo","nebraska","alabama","minnesota","colorado","northwestern","duke",
-                 "cincinnati","indiana","michigan_st","miami"]
+                 "cincinnati","indiana","michigan_st","miami","oklahoma_st","texas","purdue","florida","kansas_st","purdue",
+                 "penn_st","oklahoma","notre_dame","wisconsin","minnesota"]
     participantNames = ["jason","austin","sam","fritzy","brad_j","tommy","rick","clark","carey",
                         "nick","brownie","connor","marty","answer","numgames","empty","jake_h","cal_griff",
                         "charlie","chubbs","skeeter", "format", "confidence", "no_confidence", "ron"]
@@ -557,9 +558,9 @@ def runInputValidator(fileName):
 # runTestPool()
 
 # # Validate inputs
-# runInputValidator("week_2.txt")
+# runInputValidator("week_4.txt")
 
 # Call the main() function
-# This needs to be commented out for unit tests to run properly
-main("week_2.txt", False)
+# # # This needs to be commented out for unit tests to run properly
+main("week_4.txt", False)
 
