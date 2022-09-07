@@ -535,7 +535,9 @@ def runInputValidator(fileName):
                  "dolphins","pats","jets","steelers","titans","michigan","washington","texas","arkansas",
                  "iowa","isu","utah","byu","buffalo","nebraska","alabama","minnesota","colorado","northwestern","duke",
                  "cincinnati","indiana","michigan_st","miami","oklahoma_st","texas","purdue","florida","kansas_st","purdue",
-                 "penn_st","oklahoma","notre_dame","wisconsin","minnesota"]
+                 "penn_st","oklahoma","notre_dame","wisconsin","minnesota","georgia","va_tech","texas_am","north_western",
+                 "kentucky","mich_st","iowa_st","rutgers","texas_tech","nc_st","tcu","wv","ohio_st","baylor","illinois","rutgers",
+                 "auburn","az_st","usc","miss","unlv","wake_forest","hawaii","oregon","clemson","ucla", "florida_st"]
     participantNames = ["jason","austin","sam","fritzy","brad_j","tommy","rick","clark","carey",
                         "nick","brownie","connor","marty","answer","numgames","empty","jake_h","cal_griff",
                         "charlie","chubbs","skeeter", "format", "confidence", "no_confidence", "ron"]
@@ -557,10 +559,10 @@ def runInputValidator(fileName):
 # # Run through test pool
 # runTestPool()
 
-# # Validate inputs
-# runInputValidator("week_4.txt")
+# Validate inputs
+# runInputValidator("week_18.txt")
 
 # Call the main() function
 # # # This needs to be commented out for unit tests to run properly
-main("week_4.txt", False)
+main("week_18.txt", False)
 

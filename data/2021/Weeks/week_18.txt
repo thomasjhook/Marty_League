@@ -1,0 +1,14 @@
+answer,wash,browns,saints,steelers,bills,lions,jags,dolphins,vikings,cowboys,titans,chiefs,raiders,seahawks,49ers,bucs,51
+Marty,wash,browns,saints,steelers,bills,pack,colts,pats,vikings,cowboys,titans,chiefs,raiders,cardinals,rams,bucs,39
+Jason,wash,browns,saints,ravens,bills,pack,colts,dolphins,vikings,eagles,titans,chiefs,raiders,cardinals,rams,bucs,44
+Austin,giants,browns,saints,steelers,bills,pack,colts,dolphins,bears,cowboys,titans,chiefs,raiders,cardinals,rams,bucs,46
+Brad_J,wash,bengals,falcons,ravens,bills,pack,colts,pats,vikings,cowboys,titans,chiefs,chargers,cardinals,rams,bucs,48
+Tommy,wash,browns,saints,ravens,bills,pack,colts,pats,bears,cowboys,titans,chiefs,chargers,cardinals,rams,bucs,40
+Rick,wash,browns,falcons,ravens,bills,pack,colts,pats,bears,cowboys,titans,chiefs,chargers,cardinals,rams,bucs,42
+Jake_h,wash,browns,saints,steelers,bills,pack,colts,pats,vikings,cowboys,titans,chiefs,chargers,cardinals,rams,bucs,51
+Clark,wash,browns,saints,steelers,bills,pack,colts,pats,vikings,cowboys,titans,chiefs,raiders,cardinals,rams,bucs,45
+Carey,wash,browns,saints,ravens,bills,pack,colts,pats,vikings,cowboys,titans,chiefs,raiders,cardinals,rams,bucs,44
+Nick,wash,browns,saints,steelers,bills,pack,colts,pats,vikings,cowboys,titans,chiefs,chargers,cardinals,rams,bucs,44
+Ron,wash,bengals,falcons,steelers,bills,lions,colts,dolphins,bears,cowboys,titans,chiefs,chargers,seahawks,rams,bucs,54
+numGames,16
+format,no_confidence
