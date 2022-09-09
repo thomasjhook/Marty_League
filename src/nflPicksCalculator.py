@@ -537,10 +537,12 @@ def runInputValidator(fileName):
                  "cincinnati","indiana","michigan_st","miami","oklahoma_st","texas","purdue","florida","kansas_st","purdue",
                  "penn_st","oklahoma","notre_dame","wisconsin","minnesota","georgia","va_tech","texas_am","north_western",
                  "kentucky","mich_st","iowa_st","rutgers","texas_tech","nc_st","tcu","wv","ohio_st","baylor","illinois","rutgers",
-                 "auburn","az_st","usc","miss","unlv","wake_forest","hawaii","oregon","clemson","ucla", "florida_st"]
+                 "auburn","az_st","usc","miss","unlv","wake_forest","hawaii","oregon","clemson","ucla", "florida_st",
+                 "tennessee", "pitt", "houston", "kentucky", "stanford", "citadel", "etsu"]
     participantNames = ["jason","austin","sam","fritzy","brad_j","tommy","rick","clark","carey",
                         "nick","brownie","connor","marty","answer","numgames","empty","jake_h","cal_griff",
-                        "charlie","chubbs","skeeter", "format", "confidence", "no_confidence", "ron"]
+                        "charlie","chubbs","skeeter", "format", "confidence", "no_confidence", "ron","brownie", "aj", "chris_q",
+                        "lucas","tim","todd","tyler","mike_b","adam"]
     inFile = open(defaultValues.weeks_path + fileName)
     for line in inFile:
         line = line.strip()
@@ -560,9 +562,9 @@ def runInputValidator(fileName):
 # runTestPool()
 
 # Validate inputs
-# runInputValidator("week_18.txt")
+runInputValidator("week_1.txt")
 
 # Call the main() function
-# # # This needs to be commented out for unit tests to run properly
-main("week_18.txt", False)
+# # # # This needs to be commented out for unit tests to run properly
+# main("week_1.txt", False)
 
