@@ -532,7 +532,7 @@ def runInputValidator(fileName):
     teamNames = ["cardinals","falcons","panthers","bears","cowboys","lions","pack","rams","vikings",
                  "saints","giants","eagles","49ers","seahawks","bucs","wash","ravens","bills",
                  "bengals","browns","broncos","texans","colts","jags","chiefs","raiders","chargers",
-                 "dolphins","pats","jets","steelers","titans","michigan","washington","texas","arkansas",
+                 "dolphins","pats","jets","steelers","titans","commanders","michigan","washington","texas","arkansas",
                  "iowa","isu","utah","byu","buffalo","nebraska","alabama","minnesota","colorado","northwestern","duke",
                  "cincinnati","indiana","michigan_st","miami","oklahoma_st","texas","purdue","florida","kansas_st","purdue",
                  "penn_st","oklahoma","notre_dame","wisconsin","minnesota","georgia","va_tech","texas_am","north_western",
@@ -548,10 +548,22 @@ def runInputValidator(fileName):
         line = line.strip()
         line = line.split(",")
         for entry in line:
+            if entry.lower() == "numgames":
+                numGames = line[-1]
             if entry.lower() not in participantNames and entry.lower() not in teamNames and entry != line[-1]:
                 print(Fore.RED + "You made a typo when entering " + entry + " for " + line[0] + " in " + fileName)
                 print(Style.RESET_ALL)
                 return False
+
+    inFile = open(defaultValues.weeks_path + fileName)
+    for line in inFile:
+        line = line.strip()
+        line = line.split(",")
+        if line[0].lower() == "numgames" or line[0].lower() == "format":
+            continue
+        if len(line) != int(numGames) + 2:
+            print(Fore.RED + "Participant: " + line[0] + " does not contain enough entries")
+            return False
     print(Fore.GREEN + "Inputs are valid")
 
     return True
