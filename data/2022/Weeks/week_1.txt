@@ -17,6 +17,6 @@ Tim,alabama,tennessee,houston,florida,usc,baylor,north_western,iowa,etsu,saints,
 Todd,alabama,tennessee,texas_tech,florida,usc,baylor,north_western,iowa_st,etsu,saints,panthers,49ers,bengals,eagles,colts,dolphins,ravens,commanders,titans,cardinals,chargers,pack,cowboys,broncos,39
 Tyler,alabama,pitt,texas_tech,florida,usc,baylor,north_western,iowa,etsu,falcons,panthers,49ers,bengals,eagles,colts,pats,ravens,commanders,titans,chiefs,raiders,pack,cowboys,broncos,44
 Mike_B,alabama,pitt,houston,florida,usc,baylor,north_western,iowa,etsu,saints,browns,49ers,bengals,eagles,colts,pats,ravens,jags,titans,chiefs,chargers,pack,bucs,broncos,34
-Adam,alabama,tennessee,houston,florida,usc,baylor,north_western,iowa,etsu,saints,panthers,bears,bengals,eagles,colts,pats,ravens,jags,titans,chiefs,chargers,vikings,bucs,browns,45
+Adam,alabama,tennessee,houston,florida,usc,baylor,north_western,iowa,etsu,saints,panthers,bears,bengals,eagles,colts,pats,ravens,jags,titans,chiefs,chargers,vikings,bucs,broncos,45
 numGames,24
 format,no_confidence
