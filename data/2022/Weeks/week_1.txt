@@ -1,4 +1,4 @@
-answer,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
+answer,alabama,tennessee,texas_tech,kentucky,usc,byu,duke,iowa_st,citadel,saints,browns,bears,steelers,eagles,empty,dolphins,ravens,commanders,giants,chiefs,chargers,vikings,bucs,empty,100
 Marty,alabama,pitt,houston,kentucky,usc,byu,north_western,iowa,citadel,falcons,browns,49ers,bengals,eagles,colts,pats,ravens,commanders,titans,chiefs,chargers,pack,bucs,broncos,45
 Jason,alabama,pitt,houston,florida,usc,byu,north_western,iowa,etsu,saints,panthers,49ers,bengals,eagles,colts,dolphins,ravens,commanders,titans,chiefs,chargers,vikings,cowboys,broncos,44
 Austin,alabama,pitt,texas_tech,kentucky,usc,byu,north_western,iowa,etsu,falcons,panthers,49ers,bengals,lions,colts,pats,ravens,commanders,titans,chiefs,chargers,pack,bucs,broncos,44

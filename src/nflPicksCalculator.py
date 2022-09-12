@@ -577,6 +577,6 @@ def runInputValidator(fileName):
 runInputValidator("week_1.txt")
 
 # Call the main() function
-# # # # This needs to be commented out for unit tests to run properly
-# main("week_1.txt", False)
+# # # This needs to be commented out for unit tests to run properly
+main("week_1.txt", False)
 
