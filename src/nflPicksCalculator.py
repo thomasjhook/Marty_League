@@ -232,7 +232,7 @@ def calculateAndDisplayWinner(resultsDict, tieBreakerScore):
     # localCount refers to the number of participants that will be paid out. This
     # number needs to be adjusted as that changes. Ex: if 1st and 2nd get paid, 
     # it needs to be "while localCount < 2". 
-    while localCount < 2:
+    while localCount < 3:
         print(Style.RESET_ALL)
 
         # Set variables used for output string
