@@ -1,11 +1,11 @@
 answer,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
 Marty,oklahoma,byu,nc_st,mich_st,texas_am,cincinnati,indiana,ole_miss,ndsu,steelers,giants,browns,colts,ravens,bucs,lions,49ers,rams,raiders,broncos,bengals,pack,bills,vikings,47
-Jason,oklahoma,byu,nc_st,mich_st,texas_am,cincinnati,wku,ole_miss,ndsu,steelers,giants,browns,bucs,lions,49ers,rams,raiders,broncos,bengals,pack,bills,vikings,50
-Austin,oklahoma,byu,nc_st,washington,texas_am,cincinnati,wku,ole_miss,ndsu,steelers,panthers,browns,colts,ravens,bucs,lions,seattle,rams,cardinals,broncos,bengals,pack,bills,vikings,47
+Jason,oklahoma,byu,nc_st,mich_st,texas_am,cincinnati,wku,ole_miss,ndsu,steelers,giants,browns,colts,ravens,bucs,lions,49ers,rams,raiders,broncos,bengals,pack,bills,vikings,50
+Austin,oklahoma,byu,nc_st,washington,texas_am,cincinnati,wku,ole_miss,ndsu,steelers,panthers,browns,colts,ravens,bucs,lions,seahawks,rams,cardinals,broncos,bengals,pack,bills,vikings,47
 Brad_J,oklahoma,oregon,nc_st,mich_st,miami,cincinnati,indiana,ole_miss,ndsu,steelers,giants,browns,colts,ravens,saints,lions,49ers,rams,raiders,broncos,bengals,pack,bills,vikings,49
 Tommy,oklahoma,oregon,nc_st,washington,texas_am,cincinnati,wku,ole_miss,arizona,pats,panthers,browns,colts,dolphins,bucs,lions,49ers,rams,raiders,broncos,bengals,bears,bills,vikings,45
 Rick,oklahoma,oregon,nc_st,washington,texas_am,cincinnati,indiana,ole_miss,arizona,pats,giants,browns,colts,ravens,bucs,lions,seahawks,rams,raiders,broncos,bengals,bears,bills,vikings,51
-Jake_h,oklahoma,byu,nc_st,washington,texas_am,cincinnati,indiana,ole_miss,ndsu,steelers,panthers,browns,colts,ravens,bucs,lions,49ers,rams,raiders,broncos,bengals,packers,bills,vikings,50
+Jake_h,oklahoma,byu,nc_st,washington,texas_am,cincinnati,indiana,ole_miss,ndsu,steelers,panthers,browns,colts,ravens,bucs,lions,49ers,rams,raiders,broncos,bengals,pack,bills,vikings,50
 Clark,oklahoma,byu,nc_st,mich_st,texas_am,cincinnati,indiana,ole_miss,arizona,pats,giants,browns,jags,dolphins,saints,lions,49ers,rams,raiders,broncos,bengals,pack,bills,eagles,51
 Carey,oklahoma,byu,nc_st,washington,texas_am,cincinnati,indiana,ole_miss,arizona,steelers,panthers,browns,colts,ravens,bucs,lions,49ers,rams,raiders,broncos,bengals,pack,bills,eagles,49
 Ron,oklahoma,oregon,nc_st,mich_st,texas_am,cincinnati,indiana,ole_miss,ndsu,steelers,panthers,browns,colts,ravens,bucs,commanders,49ers,rams,raiders,broncos,bengals,pack,bills,vikings,51
