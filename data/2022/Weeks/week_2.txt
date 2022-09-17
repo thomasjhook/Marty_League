@@ -8,6 +8,7 @@ Rick,oklahoma,oregon,nc_st,washington,texas_am,cincinnati,indiana,ole_miss,arizo
 Jake_h,oklahoma,byu,nc_st,washington,texas_am,cincinnati,indiana,ole_miss,ndsu,steelers,panthers,browns,colts,ravens,bucs,lions,49ers,rams,raiders,broncos,bengals,pack,bills,vikings,50
 Clark,oklahoma,byu,nc_st,mich_st,texas_am,cincinnati,indiana,ole_miss,arizona,pats,giants,browns,jags,dolphins,saints,lions,49ers,rams,raiders,broncos,bengals,pack,bills,eagles,51
 Carey,oklahoma,byu,nc_st,washington,texas_am,cincinnati,indiana,ole_miss,arizona,steelers,panthers,browns,colts,ravens,bucs,lions,49ers,rams,raiders,broncos,bengals,pack,bills,eagles,49
+Brownie,oklahoma,oregon,nc_st,washington,miami,cincinnati,indiana,ole_miss,arizona,steelers,panthers,browns,jags,ravens,bucs,lions,49ers,rams,cardinals,broncos,bengals,pack,bills,vikings,43
 Ron,oklahoma,oregon,nc_st,mich_st,texas_am,cincinnati,indiana,ole_miss,ndsu,steelers,panthers,browns,colts,ravens,bucs,commanders,49ers,rams,raiders,broncos,bengals,pack,bills,vikings,51
 Aj,oklahoma,oregon,nc_st,mich_st,texas_am,cincinnati,indiana,georgia_tech,arizona,steelers,panthers,browns,colts,ravens,bucs,lions,49ers,rams,raiders,broncos,bengals,pack,bills,eagles,52
 Chris_Q,oklahoma,byu,texas_tech,mich_st,miami,cincinnati,indiana,ole_miss,ndsu,steelers,panthers,browns,colts,ravens,bucs,lions,49ers,rams,raiders,broncos,bengals,pack,bills,vikings,44
