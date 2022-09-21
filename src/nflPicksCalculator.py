@@ -379,6 +379,9 @@ def determineTieBreakerPayout(tieBreakerList, localCount, resultString, finalRes
     
     # Case 2: 2 people with same tiebreaker tied for 1ST
     elif localCount == 0 and len(tieBreakerList) == 2:
+        shouldTerminate = False
+        if localCount > 0:
+            shouldTerminate = True
         namesToRemove = []
         print(Fore.GREEN + "2 people tied for first place!")
         resultString = resultString + "2 people tied for first place!" + "\n"
@@ -392,7 +395,7 @@ def determineTieBreakerPayout(tieBreakerList, localCount, resultString, finalRes
         resultString = resultString + winnerNameString + " each win $" + str(amountWon) + "\n"
         print(Style.RESET_ALL)
         winnerNameString = ""
-        return (True, 2, resultString, namesToRemove, finalResultsDict)
+        return (shouldTerminate, 2, resultString, namesToRemove, finalResultsDict)
     
     # Case 3: 2 or more people with same tiebreaker tied for 2ND
     elif localCount == 1 and len(tieBreakerList) >= 2:
@@ -538,7 +541,8 @@ def runInputValidator(fileName):
                  "penn_st","oklahoma","notre_dame","wisconsin","minnesota","georgia","va_tech","texas_am","north_western",
                  "kentucky","mich_st","iowa_st","rutgers","texas_tech","nc_st","tcu","wv","ohio_st","baylor","illinois","rutgers",
                  "auburn","az_st","usc","miss","unlv","wake_forest","hawaii","oregon","clemson","ucla", "florida_st",
-                 "tennessee", "pitt", "houston", "kentucky", "stanford", "citadel", "etsu"]
+                 "tennessee", "pitt", "houston", "kentucky", "stanford", "citadel", "etsu", "ole_miss", "ndsu","wku", "arizona",
+                 "georgia_tech"]
     participantNames = ["jason","austin","sam","fritzy","brad_j","tommy","rick","clark","carey",
                         "nick","brownie","connor","marty","answer","numgames","empty","jake_h","cal_griff",
                         "charlie","chubbs","skeeter", "format", "confidence", "no_confidence", "ron","brownie", "aj", "chris_q",
@@ -578,5 +582,5 @@ runInputValidator("week_2.txt")
 
 # Call the main() function
 # # # This needs to be commented out for unit tests to run properly
-# main("week_2.txt", False)
+main("week_2.txt", False)
 

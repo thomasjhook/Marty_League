@@ -1,4 +1,4 @@
-answer,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,empty,100
+answer,oklahoma,oregon,nc_st,washington,texas_am,cincinnati,indiana,ole_miss,arizona,pats,giants,jets,jags,dolphins,bucs,lions,49ers,rams,cardinals,broncos,cowboys,pack,bills,eagles,31
 Marty,oklahoma,byu,nc_st,mich_st,texas_am,cincinnati,indiana,ole_miss,ndsu,steelers,giants,browns,colts,ravens,bucs,lions,49ers,rams,raiders,broncos,bengals,pack,bills,vikings,47
 Jason,oklahoma,byu,nc_st,mich_st,texas_am,cincinnati,wku,ole_miss,ndsu,steelers,giants,browns,colts,ravens,bucs,lions,49ers,rams,raiders,broncos,bengals,pack,bills,vikings,50
 Austin,oklahoma,byu,nc_st,washington,texas_am,cincinnati,wku,ole_miss,ndsu,steelers,panthers,browns,colts,ravens,bucs,lions,seahawks,rams,cardinals,broncos,bengals,pack,bills,vikings,47
