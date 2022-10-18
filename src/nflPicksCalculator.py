@@ -103,6 +103,7 @@ def displayTeamWinners(answersDict, fileFormat):
 # the results of everyones correct picks
 def displayResults(resultsDict):
     resultString = ""
+    # resultsDict = dict(sorted(resultsDict.items(), key=lambda item: item[1], reverse=True))
     for y in resultsDict:
         print(y, resultsDict[y][0])
         resultString = resultString + y + ": " + str(resultsDict[y]) + "\n"
@@ -542,7 +543,7 @@ def runInputValidator(fileName):
                  "kentucky","mich_st","iowa_st","rutgers","texas_tech","nc_st","tcu","wv","ohio_st","baylor","illinois","rutgers",
                  "auburn","az_st","usc","miss","unlv","wake_forest","hawaii","oregon","clemson","ucla", "florida_st",
                  "tennessee", "pitt", "houston", "kentucky", "stanford", "citadel", "etsu", "ole_miss", "ndsu","wku", "arizona",
-                 "georgia_tech", "osu", "kansas", "lsu", "wmu", "emu"]
+                 "georgia_tech", "osu", "kansas", "lsu", "wmu", "emu", "miss_st"]
     participantNames = ["jason","austin","sam","fritzy","brad_j","tommy","rick","clark","carey",
                         "nick","brownie","connor","marty","answer","numgames","empty","jake_h","cal_griff",
                         "charlie","chubbs","skeeter", "format", "confidence", "no_confidence", "ron","brownie", "aj", "chris_q",
@@ -578,9 +579,9 @@ def runInputValidator(fileName):
 # runTestPool()
 
 # Validate inputs
-runInputValidator("week_5.txt")
+runInputValidator("week_6.txt")
 
 # Call the main() function
 # # # This needs to be commented out for unit tests to run properly
-main("week_5.txt", False)
+main("week_6.txt", False)
 
