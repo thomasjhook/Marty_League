@@ -543,7 +543,7 @@ def runInputValidator(fileName):
                  "kentucky","mich_st","iowa_st","rutgers","texas_tech","nc_st","tcu","wv","ohio_st","baylor","illinois","rutgers",
                  "auburn","az_st","usc","miss","unlv","wake_forest","hawaii","oregon","clemson","ucla", "florida_st",
                  "tennessee", "pitt", "houston", "kentucky", "stanford", "citadel", "etsu", "ole_miss", "ndsu","wku", "arizona",
-                 "georgia_tech", "osu", "kansas", "lsu", "wmu", "emu", "miss_st"]
+                 "georgia_tech", "osu", "kansas", "lsu", "wmu", "emu", "miss_st","louisville"]
     participantNames = ["jason","austin","sam","fritzy","brad_j","tommy","rick","clark","carey",
                         "nick","brownie","connor","marty","answer","numgames","empty","jake_h","cal_griff",
                         "charlie","chubbs","skeeter", "format", "confidence", "no_confidence", "ron","brownie", "aj", "chris_q",
@@ -579,9 +579,9 @@ def runInputValidator(fileName):
 # runTestPool()
 
 # Validate inputs
-runInputValidator("week_6.txt")
+runInputValidator("week_7.txt")
 
 # Call the main() function
 # # # This needs to be commented out for unit tests to run properly
-main("week_6.txt", False)
+main("week_7.txt", False)
 
