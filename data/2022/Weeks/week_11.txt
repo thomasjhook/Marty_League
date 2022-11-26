@@ -1,0 +1,17 @@
+answer,tcu,indiana,vanderbilt,georgia,texas,iowa,texas_tech,oklahoma,usc,oregon,falcons,eagles,pats,commanders,saints,bills,ravens,lions,raiders,cowboys,bengals,chiefs,49ers,48
+Marty,tcu,mich_st,florida,georgia,texas,iowa,texas_tech,oklahoma,usc,oregon,falcons,eagles,pats,commanders,rams,bills,ravens,giants,raiders,vikings,bengals,chiefs,49ers,49
+Jason,tcu,mich_st,florida,georgia,texas,minnesota,iowa_st,oklahoma,usc,oregon,falcons,eagles,pats,commanders,saints,bills,ravens,giants,raiders,vikings,steelers,chiefs,49ers,46
+Austin,tcu,mich_st,florida,georgia,texas,iowa,iowa_st,oklahoma_st,ucla,utah,falcons,eagles,pats,commanders,rams,bills,ravens,giants,raiders,vikings,bengals,chiefs,49ers,41
+Brad_J,tcu,mich_st,florida,georgia,texas,iowa,iowa_st,oklahoma,ucla,oregon,bears,eagles,jets,commanders,saints,bills,ravens,giants,broncos,vikings,bengals,chiefs,49ers,46
+Tommy,baylor,mich_st,florida,georgia,texas,minnesota,iowa_st,oklahoma,usc,utah,bears,eagles,pats,texans,rams,bills,ravens,giants,raiders,cowboys,bengals,chiefs,49ers,45
+Rick,tcu,mich_st,florida,georgia,texas,iowa,iowa_st,oklahoma,ucla,utah,bears,eagles,pats,commanders,rams,bills,ravens,giants,broncos,vikings,bengals,chiefs,49ers,46
+Jake_h,baylor,mich_st,florida,georgia,texas,iowa,texas_tech,oklahoma,usc,utah,falcons,eagles,jets,commanders,rams,bills,ravens,giants,raiders,vikings,bengals,chiefs,49ers,45
+Clark,tcu,mich_st,florida,georgia,texas,iowa,iowa_st,oklahoma,ucla,utah,bears,eagles,pats,texans,rams,bills,ravens,lions,raiders,cowboys,bengals,chargers,49ers,43
+Carey,tcu,mich_st,florida,georgia,texas,iowa,iowa_st,oklahoma_st,ucla,utah,falcons,eagles,pats,commanders,saints,bills,ravens,giants,raiders,vikings,bengals,chiefs,49ers,51
+Ron,tcu,mich_st,florida,georgia,kansas,iowa,iowa_st,oklahoma,usc,utah,bears,eagles,jets,commanders,saints,bills,ravens,giants,raiders,vikings,bengals,chiefs,49ers,45
+Aj,tcu,mich_st,florida,georgia,texas,iowa,iowa_st,oklahoma_st,usc,oregon,falcons,eagles,jets,commanders,saints,bills,ravens,giants,broncos,vikings,bengals,chiefs,49ers,37
+Chris_Q,tcu,mich_st,florida,georgia,texas,minnesota,iowa_st,oklahoma_st,usc,oregon,bears,eagles,jets,commanders,rams,bills,ravens,giants,broncos,vikings,bengals,chiefs,49ers,50
+Lucas,tcu,mich_st,florida,georgia,texas,iowa,iowa_st,oklahoma_st,ucla,utah,bears,eagles,jets,texans,saints,bills,ravens,lions,raiders,vikings,bengals,chargers,49ers,41
+Tim,tcu,mich_st,florida,georgia,texas,iowa,iowa_st,oklahoma,usc,utah,falcons,eagles,jets,commanders,rams,bills,ravens,giants,raiders,vikings,bengals,chiefs,49ers,44
+numGames,23
+format,no_confidence
