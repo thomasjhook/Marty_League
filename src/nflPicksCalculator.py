@@ -579,9 +579,9 @@ def runInputValidator(fileName):
 # runTestPool()
 
 # Validate inputs
-runInputValidator("week_11.txt")
+runInputValidator("week_12.txt")
 
 # Call the main() function
 # # # This needs to be commented out for unit tests to run properly
-main("week_11.txt", False)
+main("week_12.txt", False)
 

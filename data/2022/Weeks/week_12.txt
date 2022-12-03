@@ -1,0 +1,17 @@
+answer,usc,kansas_st,texas_am,michigan,maryland,purdue,duke,penn_st,texas_tech,minnesota,panthers,browns,jags,dolphins,jets,bengals,commanders,chargers,raiders,chiefs,49ers,eagles,steelers,41
+Marty,usc,kansas_st,lsu,ohio_st,maryland,purdue,wake_forest,penn_st,oklahoma,wisconsin,broncos,bucs,ravens,dolphins,jets,bengals,commanders,chargers,seahawks,chiefs,49ers,eagles,steelers,47
+Jason,usc,kansas_st,lsu,ohio_st,maryland,purdue,wake_forest,penn_st,texas_tech,wisconsin,panthers,bucs,ravens,dolphins,jets,bengals,commanders,chargers,seahawks,chiefs,49ers,eagles,colts,39
+Austin,notre_dame,kansas_st,lsu,ohio_st,maryland,purdue,wake_forest,penn_st,oklahoma,wisconsin,broncos,bucs,ravens,dolphins,jets,titans,falcons,chargers,seahawks,chiefs,49ers,pack,steelers,42
+Brad_J,usc,kansas_st,lsu,ohio_st,maryland,purdue,duke,penn_st,oklahoma,wisconsin,broncos,bucs,ravens,dolphins,bears,titans,commanders,chargers,seahawks,chiefs,49ers,eagles,colts,42
+Tommy,usc,kansas_st,lsu,ohio_st,maryland,purdue,duke,penn_st,oklahoma,minnesota,broncos,browns,ravens,dolphins,jets,bengals,commanders,chargers,seahawks,chiefs,49ers,eagles,steelers,38
+Rick,usc,kansas_st,lsu,ohio_st,maryland,purdue,wake_forest,penn_st,oklahoma,wisconsin,panthers,bucs,ravens,dolphins,bears,bengals,commanders,chargers,seahawks,chiefs,49ers,eagles,colts,38
+Jake_h,usc,kansas_st,lsu,ohio_st,maryland,purdue,wake_forest,penn_st,oklahoma,minnesota,panthers,bucs,ravens,dolphins,jets,titans,commanders,cardinals,seahawks,chiefs,49ers,eagles,steelers,41
+Clark,usc,kansas_st,lsu,ohio_st,maryland,purdue,wake_forest,penn_st,texas_tech,wisconsin,broncos,bucs,ravens,dolphins,bears,bengals,commanders,chargers,raiders,chiefs,49ers,eagles,colts,45
+Carey,usc,kansas_st,lsu,ohio_st,maryland,purdue,wake_forest,penn_st,texas_tech,wisconsin,panthers,bucs,ravens,dolphins,jets,bengals,commanders,chargers,seahawks,chiefs,49ers,eagles,colts,42
+Ron,usc,kansas_st,lsu,ohio_st,maryland,purdue,wake_forest,penn_st,texas_tech,minnesota,broncos,bucs,ravens,dolphins,jets,bengals,commanders,chargers,seahawks,chiefs,49ers,eagles,colts,44
+Aj,usc,kansas_st,lsu,ohio_st,maryland,purdue,wake_forest,penn_st,oklahoma,wisconsin,panthers,bucs,ravens,dolphins,jets,bengals,commanders,chargers,seahawks,chiefs,49ers,eagles,steelers,42
+Chris_Q,usc,kansas_st,lsu,ohio_st,maryland,purdue,wake_forest,penn_st,oklahoma,minnesota,panthers,bucs,ravens,dolphins,bears,bengals,commanders,chargers,seahawks,chiefs,49ers,eagles,colts,42
+Lucas,notre_dame,kansas_st,lsu,ohio_st,maryland,indiana,wake_forest,penn_st,texas_tech,minnesota,broncos,browns,ravens,dolphins,jets,titans,commanders,chargers,seahawks,chiefs,49ers,eagles,colts,39
+Tim,usc,kansas_st,lsu,ohio_st,maryland,purdue,wake_forest,penn_st,texas_tech,minnesota,panthers,bucs,ravens,dolphins,jets,titans,commanders,chargers,seahawks,chiefs,49ers,eagles,colts,42
+numGames,23
+format,no_confidence
