@@ -1,0 +1,17 @@
+answer,kansas_st,tulane,clemson,toledo,georgia,michigan,fresno,pack,steelers,vikings,lions,eagles,browns,empty,ravens,49ers,seahawks,raiders,bengals,cowboys,bucs,33
+Marty,tcu,ucf,clemson,toledo,georgia,michigan,fresno,pack,steelers,vikings,lions,eagles,browns,commanders,ravens,49ers,rams,chargers,chiefs,cowboys,bucs,51
+Jason,tcu,tulane,clemson,ohio,georgia,michigan,boise,pack,steelers,vikings,lions,eagles,browns,commanders,ravens,49ers,seahawks,chargers,bengals,cowboys,bucs,41
+Austin,tcu,ucf,clemson,ohio,georgia,purdue,fresno,pack,steelers,vikings,jags,eagles,browns,commanders,ravens,49ers,seahawks,chargers,chiefs,cowboys,saints,38
+Brad_J,tcu,ucf,clemson,ohio,georgia,michigan,boise,pack,falcons,vikings,lions,titans,browns,commanders,ravens,49ers,seahawks,chargers,chiefs,cowboys,bucs,36
+Tommy,kansas_st,tulane,clemson,toledo,georgia,michigan,boise,pack,falcons,vikings,lions,eagles,browns,giants,ravens,dolphins,seahawks,chargers,bengals,cowboys,bucs,42
+Rick,kansas_st,tulane,clemson,ohio,georgia,michigan,boise,bears,falcons,vikings,lions,eagles,browns,commanders,ravens,49ers,seahawks,raiders,chiefs,cowboys,bucs,44
+Jake_h,tcu,tulane,clemson,toledo,georgia,michigan,boise,bears,steelers,vikings,jags,eagles,browns,commanders,ravens,49ers,seahawks,chargers,chiefs,cowboys,bucs,41
+Clark,tcu,ucf,clemson,ohio,georgia,michigan,fresno,bears,steelers,jets,lions,titans,browns,commanders,ravens,49ers,seahawks,raiders,chiefs,cowboys,bucs,41
+Carey,tcu,ucf,clemson,ohio,georgia,michigan,boise,pack,falcons,vikings,jags,eagles,browns,giants,ravens,49ers,seahawks,raiders,chiefs,cowboys,bucs,42
+Ron,tcu,ucf,clemson,ohio,georgia,michigan,boise,bears,steelers,vikings,lions,eagles,browns,commanders,ravens,49ers,seahawks,raiders,chiefs,cowboys,bucs,36
+Aj,tcu,tulane,clemson,ohio,georgia,michigan,fresno,bears,steelers,vikings,lions,eagles,texans,commanders,ravens,49ers,seahawks,raiders,chiefs,cowboys,bucs,42
+Chris_Q,tcu,tulane,clemson,ohio,georgia,michigan,boise,pack,steelers,vikings,lions,eagles,browns,giants,ravens,dolphins,seahawks,chargers,chiefs,cowboys,bucs,44
+Lucas,tcu,tulane,clemson,ohio,georgia,michigan,fresno,pack,steelers,vikings,lions,titans,browns,giants,ravens,dolphins,seahawks,chargers,bengals,cowboys,bucs,30
+Tim,tcu,tulane,clemson,ohio,georgia,michigan,boise,pack,falcons,vikings,jags,eagles,browns,commanders,ravens,49ers,seahawks,raiders,bengals,cowboys,bucs,44
+numGames,21
+format,no_confidence
