@@ -1,0 +1,17 @@
+answer,ravens,panthers,chiefs,saints,texans,bengals,vikings,bills,49ers,cowboys,steelers,pack,rams,bucs,chargers,23
+Marty,ravens,lions,chiefs,browns,titans,bengals,vikings,bills,49ers,eagles,steelers,pack,rams,bucs,colts,47
+Jason,ravens,lions,chiefs,browns,titans,bengals,vikings,bills,49ers,cowboys,steelers,pack,broncos,bucs,chargers,47
+Austin,ravens,lions,chiefs,saints,titans,pats,vikings,bills,commanders,eagles,raiders,pack,rams,bucs,chargers,43
+Brad_J,ravens,lions,chiefs,saints,titans,bengals,vikings,bills,49ers,cowboys,steelers,dolphins,broncos,bucs,chargers,42
+Tommy,falcons,lions,chiefs,saints,titans,bengals,giants,bears,49ers,cowboys,raiders,dolphins,rams,bucs,chargers,40
+Rick,ravens,lions,chiefs,browns,texans,bengals,vikings,bears,49ers,cowboys,raiders,dolphins,broncos,bucs,chargers,42
+Jake_h,falcons,lions,chiefs,browns,titans,bengals,vikings,bills,49ers,cowboys,raiders,dolphins,rams,bucs,chargers,42
+Clark,ravens,panthers,chiefs,browns,texans,bengals,vikings,bills,49ers,cowboys,steelers,dolphins,rams,bucs,chargers,44
+Carey,ravens,lions,chiefs,browns,titans,bengals,vikings,bills,49ers,cowboys,raiders,dolphins,rams,bucs,chargers,44
+Ron,ravens,lions,chiefs,browns,titans,bengals,vikings,bills,49ers,cowboys,raiders,dolphins,rams,bucs,chargers,40
+Aj,ravens,lions,chiefs,browns,titans,bengals,vikings,bills,49ers,cowboys,raiders,dolphins,rams,bucs,chargers,46
+Chris_Q,falcons,lions,chiefs,browns,titans,bengals,vikings,bills,49ers,cowboys,raiders,dolphins,rams,bucs,chargers,42
+Lucas,falcons,lions,chiefs,browns,titans,bengals,vikings,bills,49ers,eagles,raiders,dolphins,broncos,bucs,chargers,42
+Tim,ravens,lions,chiefs,browns,titans,bengals,vikings,bills,49ers,eagles,raiders,dolphins,broncos,bucs,chargers,48
+numGames,15
+format,no_confidence

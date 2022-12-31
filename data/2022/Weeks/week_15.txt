@@ -1,0 +1,17 @@
+answer,bills,browns,vikings,saints,giants,steelers,eagles,chiefs,jags,lions,broncos,chargers,bengals,raiders,pack,36
+Marty,bills,browns,vikings,falcons,commanders,steelers,eagles,chiefs,jags,jets,cardinals,titans,bengals,pats,pack,41
+Jason,bills,browns,vikings,saints,commanders,panthers,eagles,chiefs,cowboys,jets,broncos,chargers,bengals,pats,pack,40
+Austin,bills,browns,vikings,falcons,commanders,panthers,eagles,chiefs,cowboys,lions,cardinals,titans,bengals,pats,pack,42
+Brad_J,bills,ravens,vikings,saints,commanders,steelers,eagles,chiefs,cowboys,jets,broncos,chargers,bengals,pats,pack,39
+Tommy,bills,ravens,vikings,saints,giants,panthers,bears,chiefs,cowboys,lions,cardinals,titans,bengals,raiders,pack,46
+Rick,bills,ravens,vikings,saints,commanders,steelers,bears,chiefs,cowboys,jets,broncos,chargers,bengals,raiders,rams,48
+Jake_h,bills,browns,vikings,saints,commanders,panthers,eagles,chiefs,cowboys,lions,cardinals,chargers,bucs,pats,pack,41
+Clark,bills,browns,colts,saints,giants,panthers,eagles,chiefs,cowboys,lions,broncos,titans,bengals,raiders,pack,47
+Carey,bills,browns,vikings,saints,commanders,panthers,eagles,chiefs,cowboys,lions,cardinals,chargers,bengals,raiders,pack,41
+Ron,bills,browns,vikings,saints,commanders,panthers,eagles,chiefs,cowboys,lions,broncos,chargers,bengals,pats,pack,41
+Aj,bills,browns,vikings,saints,commanders,steelers,eagles,chiefs,cowboys,jets,cardinals,chargers,bengals,pats,pack,44
+Chris_Q,bills,browns,vikings,saints,commanders,panthers,eagles,chiefs,cowboys,jets,cardinals,chargers,bengals,raiders,pack,46
+Lucas,bills,browns,vikings,falcons,commanders,panthers,eagles,chiefs,jags,jets,cardinals,chargers,bengals,pats,pack,46
+Tim,bills,browns,vikings,saints,commanders,panthers,eagles,chiefs,cowboys,lions,broncos,chargers,bengals,raiders,pack,42
+numGames,15
+format,no_confidence
