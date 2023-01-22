@@ -1,0 +1,17 @@
+answer,alabama,iowa,tcu,georgia,tulane,lsu,penn_st,miss_st,steelers,falcons,pats,saints,giants,bucs,chiefs,lions,browns,jags,49ers,seahawks,pack,chargers,empty,100
+Marty,alabama,iowa,michigan,ohio_st,usc,lsu,utah,illinois,ravens,falcons,pats,eagles,giants,bucs,chiefs,lions,commanders,jags,49ers,seahawks,pack,rams,bengals,53
+Jason,alabama,iowa,michigan,georgia,usc,lsu,utah,miss_st,ravens,falcons,pats,eagles,giants,bucs,chiefs,lions,commanders,jags,49ers,jets,pack,chargers,bengals,47
+Austin,alabama,iowa,tcu,ohio_st,usc,purdue,utah,illinois,ravens,falcons,pats,eagles,giants,bucs,chiefs,lions,browns,texans,49ers,seahawks,vikings,chargers,bengals,47
+Brad_J,alabama,iowa,michigan,georgia,tulane,lsu,utah,miss_st,ravens,cardinals,dolphins,eagles,giants,bucs,chiefs,lions,commanders,jags,49ers,seahawks,pack,chargers,bills,51
+Tommy,alabama,iowa,tcu,ohio_st,usc,lsu,utah,illinois,steelers,cardinals,dolphins,eagles,giants,bucs,chiefs,bears,browns,jags,49ers,seahawks,vikings,chargers,bengals,49
+Rick,alabama,iowa,michigan,ohio_st,usc,lsu,penn_st,miss_st,steelers,falcons,dolphins,eagles,giants,bucs,chiefs,bears,commanders,texans,49ers,jets,vikings,chargers,bills,52
+Jake_h,alabama,iowa,michigan,georgia,usc,purdue,utah,illinois,ravens,falcons,dolphins,eagles,giants,bucs,chiefs,lions,browns,jags,49ers,seahawks,vikings,chargers,bengals,49
+Clark,alabama,iowa,michigan,ohio_st,usc,purdue,penn_st,miss_st,steelers,falcons,pats,eagles,giants,bucs,chiefs,lions,commanders,jags,49ers,jets,pack,chargers,bengals,49
+Carey,alabama,iowa,michigan,georgia,usc,lsu,penn_st,miss_st,steelers,falcons,pats,eagles,giants,bucs,chiefs,lions,commanders,jags,49ers,seahawks,pack,chargers,bills,45
+Ron,alabama,iowa,michigan,georgia,usc,lsu,penn_st,illinois,ravens,falcons,pats,eagles,giants,bucs,chiefs,lions,browns,jags,49ers,seahawks,vikings,chargers,bills,55
+Aj,alabama,kentucky,michigan,georgia,usc,lsu,penn_st,miss_st,ravens,falcons,pats,eagles,giants,bucs,chiefs,lions,commanders,jags,49ers,seahawks,vikings,chargers,bills,52
+Chris_Q,alabama,kentucky,michigan,georgia,usc,lsu,utah,miss_st,ravens,falcons,dolphins,eagles,giants,bucs,chiefs,lions,commanders,jags,49ers,seahawks,vikings,chargers,bills,50
+Lucas,alabama,iowa,michigan,georgia,tulane,lsu,penn_st,illinois,steelers,falcons,dolphins,eagles,giants,panthers,chiefs,lions,browns,jags,49ers,jets,vikings,chargers,bengals,43
+Tim,alabama,iowa,michigan,georgia,usc,lsu,utah,miss_st,ravens,falcons,pats,eagles,giants,bucs,chiefs,lions,commanders,jags,49ers,jets,vikings,chargers,bills,52
+numGames,23
+format,no_confidence

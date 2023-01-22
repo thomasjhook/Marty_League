@@ -1,0 +1,17 @@
+answer,georgia,falcons,bills,vikings,bengals,lions,texans,jags,dolphins,panthers,eagles,steelers,commanders,broncos,chiefs,seahawks,49ers,51
+Marty,georgia,bucs,bills,vikings,bengals,pack,colts,jags,dolphins,saints,eagles,steelers,cowboys,chargers,chiefs,rams,49ers,39
+Jason,georgia,falcons,bills,vikings,bengals,pack,colts,jags,dolphins,saints,eagles,steelers,cowboys,chargers,chiefs,seahawks,49ers,39
+Austin,georgia,bucs,bills,vikings,bengals,pack,colts,jags,dolphins,saints,eagles,steelers,cowboys,broncos,chiefs,seahawks,49ers,45
+Brad_J,georgia,bucs,bills,vikings,bengals,pack,colts,jags,jets,saints,eagles,steelers,cowboys,chargers,chiefs,seahawks,49ers,38
+Tommy,tcu,bucs,pats,bears,bengals,lions,texans,jags,dolphins,saints,eagles,browns,cowboys,broncos,chiefs,rams,49ers,42
+Rick,georgia,falcons,pats,vikings,bengals,pack,texans,jags,dolphins,saints,eagles,steelers,cowboys,broncos,chiefs,rams,49ers,35
+Jake_h,georgia,bucs,pats,vikings,ravens,lions,texans,jags,jets,saints,eagles,browns,cowboys,broncos,chiefs,seahawks,49ers,42
+Clark,georgia,bucs,bills,vikings,bengals,pack,texans,jags,jets,saints,eagles,browns,cowboys,broncos,chiefs,rams,49ers,37
+Carey,georgia,falcons,bills,vikings,bengals,pack,colts,jags,dolphins,saints,eagles,steelers,cowboys,chargers,chiefs,seahawks,49ers,42
+Ron,georgia,bucs,bills,vikings,bengals,lions,colts,jags,jets,saints,eagles,steelers,cowboys,chargers,chiefs,rams,49ers,35
+Aj,georgia,falcons,bills,vikings,bengals,pack,texans,jags,dolphins,panthers,eagles,steelers,cowboys,chargers,chiefs,seahawks,49ers,38
+Chris_Q,georgia,bucs,bills,vikings,bengals,pack,texans,jags,jets,saints,eagles,browns,cowboys,chargers,chiefs,seahawks,49ers,44
+Lucas,georgia,bucs,bills,vikings,bengals,pack,colts,jags,dolphins,panthers,eagles,steelers,cowboys,chargers,chiefs,rams,49ers,35
+Tim,georgia,bucs,bills,vikings,bengals,pack,colts,jags,dolphins,panthers,eagles,browns,cowboys,chargers,chiefs,seahawks,49ers,45
+numGames,17
+format,no_confidence
